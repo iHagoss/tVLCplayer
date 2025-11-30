@@ -1,4 +1,4 @@
-name: EAS Build
+name: Build Android APK
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -24,10 +24,5 @@ jobs:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Build for Android
-        if: github.event.inputs.platform == 'android' || github.event.inputs.platform == 'all' || github.event_name == 'push'
+      - name: Build Android APK
         run: eas build --platform android --profile preview --non-interactive
-
-      - name: Build for iOS
-        if: github.event.inputs.platform == 'ios' || github.event.inputs.platform == 'all'
-        run: eas build --platform ios --profile preview --non-interactive
