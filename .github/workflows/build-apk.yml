@@ -1,6 +1,9 @@
 name: Build Android Debug APK
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -27,59 +30,23 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Setup Expo
-        uses: expo/expo-github-action@v8
-        with:
-          eas-version: latest
-          token: ${{ secrets.EXPO_TOKEN }}
-
-      - name: Setup EAS Project
-        run: |
-          node -e "
-            const fs = require('fs');
-            const app = JSON.parse(fs.readFileSync('app.json', 'utf8'));
-            if (app.expo.extra) delete app.expo.extra;
-            fs.writeFileSync('app.json', JSON.stringify(app, null, 2));
-          "
-          eas init --force --non-interactive
+      - name: Generate Expo bundle
+        run: npx expo prebuild --clean --platform android
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Generate Debug Keystore
+      - name: Build APK with Gradle
         run: |
-          mkdir -p android/keystores
-          keytool -genkey -v \
-            -storetype JKS \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -storepass android \
-            -keypass android \
-            -alias androiddebugkey \
-            -keystore android/keystores/debug.keystore \
-            -dname "CN=Android Debug,O=Android,C=US"
+          cd android
+          ./gradlew assembleDebug
+          ls -lh app/build/outputs/apk/debug/
 
-      - name: Create credentials.json
+      - name: Copy APK
         run: |
-          cat > credentials.json << 'EOF'
-          {
-            "android": {
-              "keystore": {
-                "keystorePath": "./android/keystores/debug.keystore",
-                "keystorePassword": "android",
-                "keyAlias": "androiddebugkey",
-                "keyPassword": "android"
-              }
-            }
-          }
-          EOF
+          mkdir -p ./build
+          cp android/app/build/outputs/apk/debug/app-debug.apk ./StreamPlayer.apk
 
-      - name: Build Debug APK (Local)
-        run: eas build --platform android --profile preview --local --non-interactive --output ./StreamPlayer.apk
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-
-      - name: Upload Debug APK
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: StreamPlayer-Debug-APK
