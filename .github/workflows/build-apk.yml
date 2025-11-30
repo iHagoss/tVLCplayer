@@ -24,9 +24,9 @@ jobs:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Create or Link EAS Project
+      - name: Setup EAS Project
         run: |
-          # Clean any invalid projectId
+          # Remove any bad projectId from app.json
           node -e "
             const fs = require('fs');
             const app = JSON.parse(fs.readFileSync('app.json', 'utf8'));
@@ -34,26 +34,16 @@ jobs:
             fs.writeFileSync('app.json', JSON.stringify(app, null, 2));
           "
           
-          # Create a new EAS project and link it
-          echo "Creating EAS project..."
-          eas project:create --non-interactive || echo "Project may already exist"
-          
-          # Link the project (this will add the real projectId to app.json)
-          eas init --non-interactive
+          # Create and link project (--force creates it if doesn't exist)
+          eas init --force --non-interactive
           
           # Show the result
-          echo "Project linked successfully!"
+          echo "Project linked!"
           cat app.json
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Build Android APK
         run: eas build --platform android --profile preview --non-interactive
-
-      - name: Save Project Config
-        if: success()
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add app.json eas.json .eas/ 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "Link EAS project [skip ci]"
-          git push || echo "Could not push (might need permissions)"
-        continue-on-error: true
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
