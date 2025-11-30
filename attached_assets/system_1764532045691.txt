@@ -1,0 +1,5 @@
+2025-11-30T19:44:31.5690000Z Job is waiting for a hosted runner to come online.
+2025-11-30T19:44:31.5700000Z Job is about to start running on the hosted runner: GitHub Actions 1000002753
+2025-11-30T19:44:31.5670000Z Requested labels: ubuntu-latest
+2025-11-30T19:44:31.5670000Z Job defined at: iHagoss/tVLCplayer/.github/workflows/build-apk.yml@refs/heads/main
+2025-11-30T19:44:31.5670000Z Waiting for a runner to pick up this job...

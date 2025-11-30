@@ -1,0 +1,342 @@
+﻿2025-11-30T19:45:03.8791179Z ##[group]Run expo/expo-github-action@v8
+2025-11-30T19:45:03.8791630Z with:
+2025-11-30T19:45:03.8791902Z   eas-version: latest
+2025-11-30T19:45:03.8792464Z   token: ***
+2025-11-30T19:45:03.8792752Z   expo-cache: true
+2025-11-30T19:45:03.8793097Z   eas-cache: true
+2025-11-30T19:45:03.8793397Z   packager: yarn
+2025-11-30T19:45:03.8793701Z   patch-watchers: true
+2025-11-30T19:45:03.8794009Z ##[endgroup]
+2025-11-30T19:45:04.2378675Z Skipped installing expo-cli: 'expo-version' not provided.
+2025-11-30T19:45:05.0219858Z ##[group]Installing eas-cli (16.28.0) from cache or with yarn
+2025-11-30T19:45:05.2304332Z ##[warning]Failed to restore: Cache service responded with 400
+2025-11-30T19:45:05.2316163Z [command]/usr/local/bin/yarn add eas-cli@16.28.0
+2025-11-30T19:45:05.3735287Z yarn add v1.22.22
+2025-11-30T19:45:05.3884173Z info No lockfile found.
+2025-11-30T19:45:05.4087795Z [1/4] Resolving packages...
+2025-11-30T19:45:06.7050718Z warning eas-cli > @expo/plist > @xmldom/xmldom@0.7.13: this version is no longer supported, please update to at least 0.8.*
+2025-11-30T19:45:06.7052403Z warning eas-cli > @expo/config-plugins > @expo/plist > @xmldom/xmldom@0.7.13: this version is no longer supported, please update to at least 0.8.*
+2025-11-30T19:45:06.8074881Z warning eas-cli > @oclif/core > @oclif/screen@3.0.8: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2025-11-30T19:45:06.9069162Z warning eas-cli > @expo/steps > lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+2025-11-30T19:45:07.1098758Z warning eas-cli > @expo/package-manager > sudo-prompt@9.1.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2025-11-30T19:45:07.3092546Z warning eas-cli > @expo/logger > bunyan > mv > rimraf@2.4.5: Rimraf versions prior to v4 are no longer supported
+2025-11-30T19:45:07.3133040Z warning eas-cli > @expo/logger > bunyan > mv > rimraf > glob@6.0.4: Glob versions prior to v9 are no longer supported
+2025-11-30T19:45:07.7890216Z warning eas-cli > @expo/logger > bunyan > mv > rimraf > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-11-30T19:45:08.0884118Z [2/4] Fetching packages...
+2025-11-30T19:45:14.4111348Z [3/4] Linking dependencies...
+2025-11-30T19:45:14.4129830Z warning "eas-cli > @expo/plugin-help > @oclif/core > ts-node@10.9.2" has unmet peer dependency "@types/node@*".
+2025-11-30T19:45:14.4133897Z warning "eas-cli > @expo/plugin-help > @oclif/core > ts-node@10.9.2" has unmet peer dependency "typescript@>=2.7".
+2025-11-30T19:45:17.5529115Z [4/4] Building fresh packages...
+2025-11-30T19:45:19.5323260Z success Saved lockfile.
+2025-11-30T19:45:19.5638940Z success Saved 286 new dependencies.
+2025-11-30T19:45:19.5645590Z info Direct dependencies
+2025-11-30T19:45:19.5646555Z └─ eas-cli@16.28.0
+2025-11-30T19:45:19.5647218Z info All dependencies
+2025-11-30T19:45:19.5666320Z ├─ @0no-co/graphql.web@1.2.0
+2025-11-30T19:45:19.5667310Z ├─ @babel/helper-validator-identifier@7.28.5
+2025-11-30T19:45:19.5668176Z ├─ @babel/highlight@7.25.9
+2025-11-30T19:45:19.5668986Z ├─ @cspotcode/source-map-support@0.8.1
+2025-11-30T19:45:19.5669540Z ├─ @expo/apple-utils@2.1.12
+2025-11-30T19:45:19.5669985Z ├─ @expo/bunyan@4.0.1
+2025-11-30T19:45:19.5670845Z ├─ @expo/code-signing-certificates@0.0.5
+2025-11-30T19:45:19.5671466Z ├─ @expo/config-plugins@9.0.17
+2025-11-30T19:45:19.5671966Z ├─ @expo/config@10.0.6
+2025-11-30T19:45:19.5672478Z ├─ @expo/eas-json@16.25.0
+2025-11-30T19:45:19.5672917Z ├─ @expo/env@1.0.7
+2025-11-30T19:45:19.5673319Z ├─ @expo/image-utils@0.6.5
+2025-11-30T19:45:19.5673846Z ├─ @expo/multipart-body-parser@2.0.0
+2025-11-30T19:45:19.5674438Z ├─ @expo/osascript@2.1.4
+2025-11-30T19:45:19.5674933Z ├─ @expo/package-manager@1.7.0
+2025-11-30T19:45:19.5675390Z ├─ @expo/pkcs12@0.1.3
+2025-11-30T19:45:19.5675789Z ├─ @expo/plist@0.2.2
+2025-11-30T19:45:19.5676723Z ├─ @expo/plugin-help@5.1.23
+2025-11-30T19:45:19.5677314Z ├─ @expo/plugin-warn-if-update-available@2.5.1
+2025-11-30T19:45:19.5677897Z ├─ @expo/prebuild-config@8.0.17
+2025-11-30T19:45:19.5678350Z ├─ @expo/results@1.0.0
+2025-11-30T19:45:19.5678815Z ├─ @expo/rudder-sdk-node@1.1.1
+2025-11-30T19:45:19.5679265Z ├─ @expo/steps@1.0.231
+2025-11-30T19:45:19.5679823Z ├─ @expo/timeago.js@1.0.0
+2025-11-30T19:45:19.5680241Z ├─ @hapi/topo@5.1.0
+2025-11-30T19:45:19.5680805Z ├─ @isaacs/cliui@8.0.2
+2025-11-30T19:45:19.5681303Z ├─ @jridgewell/gen-mapping@0.3.13
+2025-11-30T19:45:19.5681881Z ├─ @jridgewell/resolve-uri@3.1.2
+2025-11-30T19:45:19.5682449Z ├─ @jridgewell/sourcemap-codec@1.5.5
+2025-11-30T19:45:19.5683037Z ├─ @jridgewell/trace-mapping@0.3.9
+2025-11-30T19:45:19.5683581Z ├─ @nodelib/fs.scandir@2.1.5
+2025-11-30T19:45:19.5684092Z ├─ @nodelib/fs.stat@2.0.5
+2025-11-30T19:45:19.5684599Z ├─ @oclif/linewrap@1.0.0
+2025-11-30T19:45:19.5685179Z ├─ @oclif/plugin-autocomplete@2.3.10
+2025-11-30T19:45:19.5685728Z ├─ @oclif/screen@3.0.8
+2025-11-30T19:45:19.5686242Z ├─ @pkgjs/parseargs@0.11.0
+2025-11-30T19:45:19.5686855Z ├─ @react-native/normalize-colors@0.76.2
+2025-11-30T19:45:19.5687494Z ├─ @segment/ajv-human-errors@2.15.0
+2025-11-30T19:45:19.5688129Z ├─ @segment/loosely-validate-event@2.0.0
+2025-11-30T19:45:19.5689041Z ├─ @sideway/address@4.1.5
+2025-11-30T19:45:19.5689504Z ├─ @tsconfig/node10@1.0.12
+2025-11-30T19:45:19.5689954Z ├─ @tsconfig/node12@1.0.11
+2025-11-30T19:45:19.5690592Z ├─ @tsconfig/node14@1.0.3
+2025-11-30T19:45:19.5692354Z ├─ @tsconfig/node16@1.0.4
+2025-11-30T19:45:19.5692841Z ├─ @types/bunyan@1.8.11
+2025-11-30T19:45:19.5693308Z ├─ @types/cli-progress@3.11.6
+2025-11-30T19:45:19.5693756Z ├─ @urql/core@4.0.11
+2025-11-30T19:45:19.5694191Z ├─ @urql/exchange-retry@1.2.0
+2025-11-30T19:45:19.5694648Z ├─ acorn-walk@8.3.4
+2025-11-30T19:45:19.5695027Z ├─ acorn@8.15.0
+2025-11-30T19:45:19.5695412Z ├─ agent-base@6.0.2
+2025-11-30T19:45:19.5695810Z ├─ ajv-formats@2.1.1
+2025-11-30T19:45:19.5696180Z ├─ ajv@8.11.0
+2025-11-30T19:45:19.5696577Z ├─ ansicolors@0.3.2
+2025-11-30T19:45:19.5696945Z ├─ arg@4.1.3
+2025-11-30T19:45:19.5697352Z ├─ argparse@1.0.10
+2025-11-30T19:45:19.5697751Z ├─ array-union@2.1.0
+2025-11-30T19:45:19.5698138Z ├─ asn1@0.2.6
+2025-11-30T19:45:19.5698528Z ├─ astral-regex@2.0.0
+2025-11-30T19:45:19.5698923Z ├─ async@3.2.6
+2025-11-30T19:45:19.5699289Z ├─ asynckit@0.4.0
+2025-11-30T19:45:19.5699693Z ├─ balanced-match@1.0.2
+2025-11-30T19:45:19.5700175Z ├─ bare-events@2.8.2
+2025-11-30T19:45:19.5701270Z ├─ base64-js@1.5.1
+2025-11-30T19:45:19.5705999Z ├─ better-opn@3.0.2
+2025-11-30T19:45:19.5706553Z ├─ bplist-creator@0.1.0
+2025-11-30T19:45:19.5707060Z ├─ bplist-parser@0.3.2
+2025-11-30T19:45:19.5707789Z ├─ braces@3.0.3
+2025-11-30T19:45:19.5708321Z ├─ buffer-equal-constant-time@1.0.1
+2025-11-30T19:45:19.5708819Z ├─ bunyan@1.8.15
+2025-11-30T19:45:19.5709293Z ├─ call-bind-apply-helpers@1.0.2
+2025-11-30T19:45:19.5709752Z ├─ charenc@0.0.2
+2025-11-30T19:45:19.5710117Z ├─ chownr@2.0.0
+2025-11-30T19:45:19.5711188Z ├─ cli-cursor@3.1.0
+2025-11-30T19:45:19.5711727Z ├─ cli-progress@3.12.0
+2025-11-30T19:45:19.5712180Z ├─ cli-spinners@2.9.2
+2025-11-30T19:45:19.5712594Z ├─ clone@1.0.4
+2025-11-30T19:45:19.5713002Z ├─ color-convert@2.0.1
+2025-11-30T19:45:19.5713437Z ├─ color-name@1.1.4
+2025-11-30T19:45:19.5713861Z ├─ combined-stream@1.0.8
+2025-11-30T19:45:19.5714320Z ├─ commander@4.1.1
+2025-11-30T19:45:19.5714752Z ├─ component-type@1.2.2
+2025-11-30T19:45:19.5715197Z ├─ concat-map@0.0.1
+2025-11-30T19:45:19.5715608Z ├─ content-type@1.0.5
+2025-11-30T19:45:19.5716051Z ├─ create-require@1.1.1
+2025-11-30T19:45:19.5716487Z ├─ cross-spawn@7.0.6
+2025-11-30T19:45:19.5716867Z ├─ crypt@0.0.2
+2025-11-30T19:45:19.5717309Z ├─ crypto-random-string@2.0.0
+2025-11-30T19:45:19.5717798Z ├─ dateformat@4.6.3
+2025-11-30T19:45:19.5718174Z ├─ debug@4.4.3
+2025-11-30T19:45:19.5718554Z ├─ defaults@1.0.4
+2025-11-30T19:45:19.5718974Z ├─ define-lazy-prop@2.0.0
+2025-11-30T19:45:19.5719441Z ├─ delayed-stream@1.0.0
+2025-11-30T19:45:19.5719845Z ├─ diff@7.0.0
+2025-11-30T19:45:19.5720221Z ├─ dir-glob@3.0.1
+2025-11-30T19:45:19.5721162Z ├─ domino@2.1.6
+2025-11-30T19:45:19.5721600Z ├─ dotenv-expand@11.0.7
+2025-11-30T19:45:19.5722021Z ├─ dotenv@16.3.1
+2025-11-30T19:45:19.5722418Z ├─ dtrace-provider@0.8.8
+2025-11-30T19:45:19.5722847Z ├─ dunder-proto@1.0.1
+2025-11-30T19:45:19.5723274Z ├─ eas-cli@16.28.0
+2025-11-30T19:45:19.5723658Z ├─ eastasianwidth@0.2.0
+2025-11-30T19:45:19.5724098Z ├─ ecdsa-sig-formatter@1.0.11
+2025-11-30T19:45:19.5724500Z ├─ ejs@3.1.10
+2025-11-30T19:45:19.5724914Z ├─ env-paths@2.2.0
+2025-11-30T19:45:19.5725351Z ├─ env-string@1.0.1
+2025-11-30T19:45:19.5725761Z ├─ envinfo@7.11.0
+2025-11-30T19:45:19.5726130Z ├─ err-code@2.0.3
+2025-11-30T19:45:19.5726504Z ├─ error-ex@1.3.4
+2025-11-30T19:45:19.5726915Z ├─ es-define-property@1.0.1
+2025-11-30T19:45:19.5727370Z ├─ es-object-atoms@1.1.1
+2025-11-30T19:45:19.5727818Z ├─ es-set-tostringtag@2.1.0
+2025-11-30T19:45:19.5728221Z ├─ esprima@4.0.1
+2025-11-30T19:45:19.5728618Z ├─ events-universal@1.0.1
+2025-11-30T19:45:19.5729040Z ├─ exec-async@2.2.0
+2025-11-30T19:45:19.5729463Z ├─ fast-deep-equal@3.1.3
+2025-11-30T19:45:19.5729858Z ├─ fast-fifo@1.3.2
+2025-11-30T19:45:19.5730242Z ├─ fast-glob@3.3.2
+2025-11-30T19:45:19.5734427Z ├─ fast-uri@3.1.0
+2025-11-30T19:45:19.5734876Z ├─ fastq@1.19.1
+2025-11-30T19:45:19.5735277Z ├─ fetch-retry@4.1.1
+2025-11-30T19:45:19.5735922Z ├─ figures@3.2.0
+2025-11-30T19:45:19.5736305Z ├─ filelist@1.0.4
+2025-11-30T19:45:19.5736701Z ├─ fill-range@7.1.1
+2025-11-30T19:45:19.5737071Z ├─ find-up@4.1.0
+2025-11-30T19:45:19.5737467Z ├─ foreground-child@3.3.1
+2025-11-30T19:45:19.5737894Z ├─ form-data@4.0.5
+2025-11-30T19:45:19.5738286Z ├─ fs-minipass@2.1.0
+2025-11-30T19:45:19.5738685Z ├─ get-intrinsic@1.3.0
+2025-11-30T19:45:19.5739094Z ├─ get-proto@1.0.1
+2025-11-30T19:45:19.5739449Z ├─ glob@10.5.0
+2025-11-30T19:45:19.5739823Z ├─ golden-fleece@1.0.9
+2025-11-30T19:45:19.5740232Z ├─ gradle-to-js@2.0.1
+2025-11-30T19:45:19.5740831Z ├─ graphql-tag@2.12.6
+2025-11-30T19:45:19.5741213Z ├─ graphql@16.8.1
+2025-11-30T19:45:19.5741594Z ├─ has-symbols@1.1.0
+2025-11-30T19:45:19.5742026Z ├─ has-tostringtag@1.0.2
+2025-11-30T19:45:19.5742442Z ├─ hosted-git-info@7.0.2
+2025-11-30T19:45:19.5742845Z ├─ http-call@5.3.0
+2025-11-30T19:45:19.5743248Z ├─ https-proxy-agent@5.0.1
+2025-11-30T19:45:19.5743630Z ├─ ignore@5.3.0
+2025-11-30T19:45:19.5744021Z ├─ imurmurhash@0.1.4
+2025-11-30T19:45:19.5744402Z ├─ inflight@1.0.6
+2025-11-30T19:45:19.5744762Z ├─ inherits@2.0.4
+2025-11-30T19:45:19.5745131Z ├─ is-arrayish@0.2.1
+2025-11-30T19:45:19.5745511Z ├─ is-buffer@1.1.6
+2025-11-30T19:45:19.5745883Z ├─ is-docker@2.2.1
+2025-11-30T19:45:19.5746233Z ├─ is-extglob@2.1.1
+2025-11-30T19:45:19.5746586Z ├─ is-glob@4.0.3
+2025-11-30T19:45:19.5746966Z ├─ is-interactive@1.0.0
+2025-11-30T19:45:19.5747370Z ├─ is-number@7.0.0
+2025-11-30T19:45:19.5747774Z ├─ is-retry-allowed@1.2.0
+2025-11-30T19:45:19.5748185Z ├─ is-stream@2.0.1
+2025-11-30T19:45:19.5748613Z ├─ is-unicode-supported@0.1.0
+2025-11-30T19:45:19.5749041Z ├─ isexe@2.0.0
+2025-11-30T19:45:19.5749407Z ├─ jackspeak@3.4.3
+2025-11-30T19:45:19.5749784Z ├─ jake@10.9.4
+2025-11-30T19:45:19.5750168Z ├─ jimp-compact@0.16.1
+2025-11-30T19:45:19.5756491Z ├─ jks-js@1.1.0
+2025-11-30T19:45:19.5762199Z ├─ join-component@1.1.0
+2025-11-30T19:45:19.5762661Z ├─ js-tokens@4.0.0
+2025-11-30T19:45:19.5763043Z ├─ js-yaml@3.14.2
+2025-11-30T19:45:19.5763419Z ├─ jsep@1.4.0
+2025-11-30T19:45:19.5763885Z ├─ json-parse-better-errors@1.0.2
+2025-11-30T19:45:19.5764357Z ├─ jsonwebtoken@9.0.0
+2025-11-30T19:45:19.5764723Z ├─ jwa@1.4.2
+2025-11-30T19:45:19.5765046Z ├─ jws@3.2.2
+2025-11-30T19:45:19.5765388Z ├─ keychain@1.5.0
+2025-11-30T19:45:19.5765737Z ├─ kleur@3.0.3
+2025-11-30T19:45:19.5766133Z ├─ lines-and-columns@1.2.4
+2025-11-30T19:45:19.5766574Z ├─ locate-path@5.0.0
+2025-11-30T19:45:19.5767000Z ├─ lodash.clonedeep@4.5.0
+2025-11-30T19:45:19.5767438Z ├─ lodash.get@4.4.2
+2025-11-30T19:45:19.5767842Z ├─ lodash.merge@4.6.2
+2025-11-30T19:45:19.5768243Z ├─ lodash@4.17.21
+2025-11-30T19:45:19.5768633Z ├─ lru-cache@10.4.3
+2025-11-30T19:45:19.5769020Z ├─ make-error@1.3.6
+2025-11-30T19:45:19.5769684Z ├─ math-intrinsics@1.1.0
+2025-11-30T19:45:19.5770082Z ├─ md5@2.3.0
+2025-11-30T19:45:19.5770623Z ├─ mime-db@1.52.0
+2025-11-30T19:45:19.5771040Z ├─ mime-types@2.1.35
+2025-11-30T19:45:19.5771415Z ├─ mime@3.0.0
+2025-11-30T19:45:19.5771766Z ├─ mimic-fn@2.1.0
+2025-11-30T19:45:19.5772156Z ├─ minimatch@5.1.2
+2025-11-30T19:45:19.5772599Z ├─ minimist@1.2.8
+2025-11-30T19:45:19.5772958Z ├─ minipass@7.1.2
+2025-11-30T19:45:19.5773315Z ├─ minizlib@3.0.1
+2025-11-30T19:45:19.5773655Z ├─ mkdirp@1.0.4
+2025-11-30T19:45:19.5773991Z ├─ moment@2.30.1
+2025-11-30T19:45:19.5774331Z ├─ ms@2.1.3
+2025-11-30T19:45:19.5774693Z ├─ multipasta@0.2.7
+2025-11-30T19:45:19.5775078Z ├─ mute-stream@0.0.8
+2025-11-30T19:45:19.5775429Z ├─ mv@2.1.1
+2025-11-30T19:45:19.5775746Z ├─ mz@2.7.0
+2025-11-30T19:45:19.5776066Z ├─ nan@2.23.1
+2025-11-30T19:45:19.5776404Z ├─ nanoid@3.3.8
+2025-11-30T19:45:19.5776748Z ├─ ncp@2.0.0
+2025-11-30T19:45:19.5777107Z ├─ node-fetch@2.6.7
+2025-11-30T19:45:19.5777501Z ├─ node-int64@0.4.0
+2025-11-30T19:45:19.5777885Z ├─ node-rsa@1.1.1
+2025-11-30T19:45:19.5778313Z ├─ node-stream-zip@1.15.0
+2025-11-30T19:45:19.5778773Z ├─ npm-package-arg@11.0.3
+2025-11-30T19:45:19.5779201Z ├─ nullthrows@1.1.1
+2025-11-30T19:45:19.5779585Z ├─ object-assign@4.1.1
+2025-11-30T19:45:19.5779954Z ├─ onetime@5.1.2
+2025-11-30T19:45:19.5780713Z ├─ open@8.4.2
+2025-11-30T19:45:19.5781051Z ├─ ora@5.1.0
+2025-11-30T19:45:19.5781397Z ├─ p-limit@2.3.0
+2025-11-30T19:45:19.5781775Z ├─ p-locate@4.1.0
+2025-11-30T19:45:19.5782122Z ├─ p-try@2.2.0
+2025-11-30T19:45:19.5782572Z ├─ package-json-from-dist@1.0.1
+2025-11-30T19:45:19.5783025Z ├─ parse-json@4.0.0
+2025-11-30T19:45:19.5783411Z ├─ parse-png@2.1.0
+2025-11-30T19:45:19.5783819Z ├─ path-is-absolute@1.0.1
+2025-11-30T19:45:19.5784226Z ├─ path-key@3.1.1
+2025-11-30T19:45:19.5784606Z ├─ path-scurry@1.11.1
+2025-11-30T19:45:19.5784999Z ├─ path-type@4.0.0
+2025-11-30T19:45:19.5785381Z ├─ picocolors@1.1.1
+2025-11-30T19:45:19.5785747Z ├─ picomatch@2.3.1
+2025-11-30T19:45:19.5786102Z ├─ pirates@4.0.7
+2025-11-30T19:45:19.5786472Z ├─ pkg-dir@4.2.0
+2025-11-30T19:45:19.5786807Z ├─ plist@3.1.0
+2025-11-30T19:45:19.5787154Z ├─ pngjs@7.0.0
+2025-11-30T19:45:19.5787536Z ├─ proc-log@4.2.0
+2025-11-30T19:45:19.5787948Z ├─ promise-limit@2.7.0
+2025-11-30T19:45:19.5788370Z ├─ promise-retry@2.0.1
+2025-11-30T19:45:19.5788774Z ├─ prompts@2.4.2
+2025-11-30T19:45:19.5789151Z ├─ punycode@2.3.1
+2025-11-30T19:45:19.5789561Z ├─ qrcode-terminal@0.12.0
+2025-11-30T19:45:19.5790007Z ├─ queue-microtask@1.2.3
+2025-11-30T19:45:19.5790552Z ├─ redeyed@2.1.1
+2025-11-30T19:45:19.5791029Z ├─ remove-trailing-slash@0.1.1
+2025-11-30T19:45:19.5791495Z ├─ restore-cursor@3.1.0
+2025-11-30T19:45:19.5791867Z ├─ retry@0.12.0
+2025-11-30T19:45:19.5792208Z ├─ reusify@1.1.0
+2025-11-30T19:45:19.5792570Z ├─ rimraf@5.0.10
+2025-11-30T19:45:19.5792960Z ├─ run-parallel@1.2.0
+2025-11-30T19:45:19.5793418Z ├─ safe-json-stringify@1.2.0
+2025-11-30T19:45:19.5793885Z ├─ safer-buffer@2.1.2
+2025-11-30T19:45:19.5794259Z ├─ sax@1.4.3
+2025-11-30T19:45:19.5794612Z ├─ semver@7.7.3
+2025-11-30T19:45:19.5795051Z ├─ set-interval-async@3.0.3
+2025-11-30T19:45:19.5795507Z ├─ shebang-command@2.0.0
+2025-11-30T19:45:19.5795945Z ├─ shebang-regex@3.0.0
+2025-11-30T19:45:19.5796354Z ├─ simple-plist@1.3.1
+2025-11-30T19:45:19.5796751Z ├─ sisteransi@1.0.5
+2025-11-30T19:45:19.5797132Z ├─ slice-ansi@4.0.0
+2025-11-30T19:45:19.5797512Z ├─ split@1.0.1
+2025-11-30T19:45:19.5797878Z ├─ sprintf-js@1.0.3
+2025-11-30T19:45:19.5798287Z ├─ stream-buffers@2.2.0
+2025-11-30T19:45:19.5798695Z ├─ streamx@2.23.0
+2025-11-30T19:45:19.5799090Z ├─ string-width-cjs@4.2.3
+2025-11-30T19:45:19.5799653Z ├─ strip-ansi-cjs@6.0.1
+2025-11-30T19:45:19.5800075Z ├─ sudo-prompt@9.1.1
+2025-11-30T19:45:19.5800657Z ├─ supports-color@7.2.0
+2025-11-30T19:45:19.5801085Z ├─ tar-stream@3.1.7
+2025-11-30T19:45:19.5801440Z ├─ tar@6.2.1
+2025-11-30T19:45:19.5801795Z ├─ temp-dir@2.0.0
+2025-11-30T19:45:19.5802190Z ├─ text-decoder@1.2.3
+2025-11-30T19:45:19.5802601Z ├─ thenify-all@1.6.0
+2025-11-30T19:45:19.5802971Z ├─ thenify@3.3.1
+2025-11-30T19:45:19.5803354Z ├─ this-file@2.0.3
+2025-11-30T19:45:19.5803964Z ├─ through@2.3.8
+2025-11-30T19:45:19.5804366Z ├─ to-regex-range@5.0.1
+2025-11-30T19:45:19.5804749Z ├─ tr46@0.0.3
+2025-11-30T19:45:19.5805134Z ├─ ts-deepmerge@6.2.0
+2025-11-30T19:45:19.5805611Z ├─ ts-interface-checker@0.1.13
+2025-11-30T19:45:19.5806279Z ├─ ts-node@10.9.2
+2025-11-30T19:45:19.5806641Z ├─ tslib@2.8.1
+2025-11-30T19:45:19.5807024Z ├─ tunnel-agent@0.6.0
+2025-11-30T19:45:19.5807424Z ├─ turndown@7.1.2
+2025-11-30T19:45:19.5807813Z ├─ type-fest@0.21.3
+2025-11-30T19:45:19.5808216Z ├─ undici-types@7.16.0
+2025-11-30T19:45:19.5808637Z ├─ unique-string@2.0.0
+2025-11-30T19:45:19.5809040Z ├─ untildify@4.0.0
+2025-11-30T19:45:19.5809392Z ├─ uri-js@4.4.1
+2025-11-30T19:45:19.5809733Z ├─ uuid@8.3.2
+2025-11-30T19:45:19.5810136Z ├─ v8-compile-cache-lib@3.0.1
+2025-11-30T19:45:19.5810847Z ├─ validate-npm-package-name@5.0.1
+2025-11-30T19:45:19.5811358Z ├─ webidl-conversions@3.0.1
+2025-11-30T19:45:19.5811757Z ├─ which@2.0.2
+2025-11-30T19:45:19.5812126Z ├─ wordwrap@1.0.0
+2025-11-30T19:45:19.5812548Z ├─ wrap-ansi-cjs@7.0.0
+2025-11-30T19:45:19.5812926Z ├─ yaml@2.6.0
+2025-11-30T19:45:19.5813249Z ├─ yn@3.1.1
+2025-11-30T19:45:19.5813612Z └─ yocto-queue@0.1.0
+2025-11-30T19:45:19.5813962Z Done in 14.21s.
+2025-11-30T19:45:24.5272461Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/tVLCplayer/tVLCplayer --files-from manifest.txt --use-compress-program zstdmt
+2025-11-30T19:45:25.2318866Z ##[warning]Failed to save: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>01Z4saQAAAAA0L5klU81ATKHhN7d1fR/GUEhMMzBFREdFMDIxNwBFZGdl
+2025-11-30T19:45:25.2348337Z ##[endgroup]
+2025-11-30T19:45:25.2349546Z ##[group]Validating authenticated account
+2025-11-30T19:45:25.2369602Z [command]/opt/hostedtoolcache/eas-cli/16.28.0/x64/node_modules/.bin/eas whoami
+2025-11-30T19:45:26.2243366Z hagoss (authenticated using EXPO_TOKEN)
+2025-11-30T19:45:26.4766456Z ##[endgroup]
+2025-11-30T19:45:26.4769219Z ##[group]Patching system watchers for the 'ENOSPC' error
+2025-11-30T19:45:26.4783868Z [command]/usr/bin/sudo sysctl fs.inotify.max_user_instances=524288
+2025-11-30T19:45:26.4871148Z fs.inotify.max_user_instances = 524288
+2025-11-30T19:45:26.4897596Z [command]/usr/bin/sudo sysctl fs.inotify.max_user_watches=524288
+2025-11-30T19:45:26.4975188Z fs.inotify.max_user_watches = 524288
+2025-11-30T19:45:26.5003071Z [command]/usr/bin/sudo sysctl fs.inotify.max_queued_events=524288
+2025-11-30T19:45:26.5078983Z fs.inotify.max_queued_events = 524288
+2025-11-30T19:45:26.5106810Z [command]/usr/bin/sudo sysctl -p
+2025-11-30T19:45:26.5183842Z vm.max_map_count = 262144
+2025-11-30T19:45:26.5188157Z fs.inotify.max_user_watches = 655360
+2025-11-30T19:45:26.5189577Z fs.inotify.max_user_instances = 1280
+2025-11-30T19:45:26.5190048Z vm.mmap_rnd_bits = 28
+2025-11-30T19:45:26.5197115Z Patched system watchers for the `ENOSPC` error.
+2025-11-30T19:45:26.5199105Z ##[endgroup]

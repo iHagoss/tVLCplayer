@@ -1,0 +1,256 @@
+# VLC-Based Media Player - Complete Project Specification
+
+**Version:** 1.0  
+**Last Updated:** November 30, 2025  
+**Status:** Ready for Fresh Build
+
+---
+
+## Complete Project Specification
+
+I want to build a **custom VLC-based Android media player** that enhances VLC's native capabilities with intelligent skip detection, while preserving its proven auto-next episode functionality.
+
+### Core Vision
+
+Create a **universal APK** media player that:
+- Integrates seamlessly with **Stremio as the external player**
+- Runs on **FireStick 4K, Android TV, and mobile phones** (arm64-v8a + armeabi-v7a)
+- Uses **VLC's stable video engine** without modification
+- Adds **intelligent Netflix-like skip detection** (chapters → audio fingerprint → manual fallback) with Netflix-style animated skip and cancel buttons
+- Includes **Trakt scrobbling, Debrid integration, and GitHub CI/CD**
+
+### What We Preserve From Official VLC
+
+**Core features (use VLC's native implementation):**
+- ✅ Playback speed control (0.5x - 2.0x)
+- ✅ Audio delay adjustment
+- ✅ Audio track selection (multi-language)
+- ✅ Subtitle track selection with styling
+- ✅ Auto-next episode (native VLC behavior, no modification)
+- ✅ Debrid service support
+- ✅ Hardware video acceleration
+- ✅ Metadata scraping
+- ✅ Chapter data extraction (from video file)
+- ✅ Stremio/Syncler protocol handoff
+
+---
+
+## Skip Detection Strategy (PRIORITY #1)
+
+**Three-tier approach with user toggles:**
+
+### Tier 1: Chapter Skip (Highest Priority)
+- Extract chapter data that VLC already reads
+- Detect intro/outro/credits from chapter names
+- Create skip buttons when chapters match skip patterns
+- Toggle: `enabled_chapter_skip` (default: enabled)
+
+### Tier 2: Audio Fingerprint Skip (Fallback)
+- Analyze audio signatures for intro/outro repetition
+- Detect silence/credits sequences
+- Only activates if chapter skip unavailable
+- Toggle: `enabled_audio_skip` (default: enabled)
+
+### Tier 3: Manual Skip (User Fallback)
+- Users enter custom skip times in settings
+- **Intro**: Input time in seconds (e.g., 120s) = skip from **start**
+- **Credits**: Input time in seconds (e.g., 300s) = skip from **end** (auto-calculates)
+- Per-episode storage with IMDb ID + season/episode
+- Toggle: `enabled_manual_skip` (default: enabled)
+
+### UI/UX Requirements
+- "Skip" button appears during detectable skip segments
+- Button shows skip type: "Skip Intro (45s)", "Skip Credits (1:30)"
+- Auto-skip option: skip automatically without user interaction
+- Settings toggles for each skip strategy (for testing)
+
+### Persistent Settings
+- Store in SharedPreferences or local SQLite database
+- Survives app restart/crash
+- Settings schema:
+  ```
+  enabled_chapter_skip: Boolean
+  enabled_audio_skip: Boolean
+  enabled_manual_skip: Boolean
+  auto_skip_enabled: Boolean
+  skip_fade_time: Int (ms before skip point to fade out audio)
+  manual_skips: Map<String, EpisodeSkipData>
+    - episodeId (imdbId_s##e##)
+    - introStart: Int (seconds)
+    - creditsStart: Int (seconds from end)
+    - lastUpdated: Long
+  ```
+
+---
+
+## Custom Time Display
+
+- Show **current time: 7:45 PM** (12-hour AM/PM)
+- Show **ends at: 10:30 PM** (12-hour AM/PM)
+- Updates in real-time as playback position changes
+- Adjusts for playback speed (1.5x speed → earlier end time)
+- Clean overlay on player UI
+
+---
+
+## Next Episode Pre-Caching (Non-Invasive)
+
+- **Critical**: Do NOT modify VLC's native auto-next behavior
+- When video reaches 80% completion:
+  - Fetch next episode in background
+  - Pre-buffer ~30 seconds of next episode audio/video
+  - When VLC auto-next triggers, provide already-buffered stream
+  - User experiences instant playback
+- If pre-cache fails, fall back to normal VLC auto-next
+
+---
+
+## Trakt.tv Integration
+
+- OAuth2 PIN flow (user-friendly)
+- Scrobbling: playback progress (start, pause, stop, 80% watched)
+- Sync watched status to Trakt
+- Collection management
+
+---
+
+## Debrid Integration
+
+- Query cache status (Real-Debrid, AllDebrid, Premiumuze, TorBox)
+- Support existing debrid workflows
+
+---
+
+## GitHub Workflow Build
+
+- Automatic APK build on push
+- Debug + release variants
+- Secrets: `TRAKT_CLIENT_ID`, `TRAKT_CLIENT_SECRET`
+- Downloadable from workflow artifacts
+
+---
+
+## Architecture
+
+```
+app/src/main/java/com/tvplayer/
+├── player/
+│   ├── VLCPlayerWrapper.kt         # VLC wrapper (don't modify VLC internals)
+│   └── PlayerActivity.kt           # Main UI activity
+├── features/
+│   ├── skipdetection/              # PRIORITY: Skip detection system
+│   │   ├── SkipDetectionManager.kt # Strategy coordinator
+│   │   ├── strategies/
+│   │   │   ├── ChapterSkipStrategy.kt      # Tier 1: Chapter-based
+│   │   │   ├── AudioFingerprintStrategy.kt # Tier 2: Audio analysis
+│   │   │   └── ManualSkipStrategy.kt       # Tier 3: User input
+│   │   ├── SkipMarkerStore.kt     # Persistent storage (manual skips)
+│   │   └── SkipUI.kt              # Skip button display logic
+│   ├── timedisplay/                # Custom time display
+│   │   └── TimeDisplayHelper.kt
+│   ├── precache/                   # Episode pre-caching (non-invasive)
+│   │   ├── EpisodePrecacher.kt
+│   │   └── StreamBuffer.kt
+│   ├── trakt/                      # Trakt integration
+│   │   ├── TraktService.kt
+│   │   └── TraktAuthManager.kt
+│   └── debrid/
+│       ├── RealDebridClient.kt
+│       ├── AllDebridClient.kt
+│       ├── PremiumizeClient.kt
+│       └── TorBox.kt
+├── storage/
+│   ├── SkipPreferences.kt          # Persistent skip settings
+│   ├── EpisodeSkipData.kt          # Manual skip times storage
+│   └── AppDatabase.kt             # SQLite for skip history
+└── ui/
+    ├── overlays/
+    ├── dialogs/
+    ├── settings/
+    └── SkipSettingsFragment.kt     # Toggle skip strategies
+```
+
+---
+
+## Skip Detection - Detailed Specs
+
+### Chapter Skip Strategy
+```kotlin
+// VLC provides chapter data. Extract:
+// - Chapter name: "Intro", "Opening", "Credits", "Outro", etc.
+// - Chapter start/end times
+// Detect patterns and create skip markers
+```
+
+### Audio Fingerprint Strategy
+```kotlin
+// Analyze audio stream for:
+// - Repeated intro patterns (audio fingerprinting)
+// - Silence detection (end credits indicator)
+// - Track changes (audio signature shifts)
+```
+
+### Manual Skip Strategy
+```kotlin
+// User enters in settings:
+// Intro: 120 seconds → automatically skip 0-120s from start
+// Credits: 300 seconds → automatically skip (duration-300s) to end
+// Stored per episode (episode_id = imdbId_s##e##)
+```
+
+---
+
+## Non-Goals
+
+- ❌ Don't fork VLC source
+- ❌ Don't replace VLC's video decoder
+- ❌ Don't break VLC's auto-next episode
+- ❌ Don't add unnecessary UI bloat
+
+---
+
+## Success Criteria
+
+1. ✅ App installs on all target devices
+2. ✅ Stremio → App integration works
+3. ✅ Chapter skip detects and displays "Skip Intro" button
+4. ✅ Audio fingerprint detects intro/outro patterns
+5. ✅ Manual skip accepts user input (120s for intro, 300s from end for credits)
+6. ✅ Skip settings persist across app restart
+7. ✅ Skip toggles work (can disable each strategy for testing)
+8. ✅ Custom time display shows current time and end time
+9. ✅ Pre-caching fetches next episode without disrupting VLC's auto-next
+10. ✅ Trakt OAuth PIN flow works
+11. ✅ GitHub Actions builds APK successfully
+
+---
+
+## Build Requirements
+
+- **minSdkVersion**: 21 (for wide device support)
+- **VLC dependency**: Latest stable from Maven Central (`org.videolan.android:libvlc-all`)
+- **Single universal APK** (no architecture-specific splits)
+- **GitHub Actions workflow** that builds on push and stores secrets securely
+- All Trakt/Debrid credentials injected via GitHub Secrets
+
+---
+
+## Testing Targets
+
+- FireStick 4K (arm64-v8a)
+- Older FireStick (armeabi-v7a)
+- Android TV devices
+- Galaxy S-series phones
+- Tablet devices
+
+### Coding and Documentation
+
+- keep things clean and modular for easy debugging and easy maintenance and easy future features to be implemented
+
+- add comments in each section without affecting the workings of the code - detailing what each section does, what other sections or files it needs to interact with - if anything can be changed for personalisation and if things need to be done or implemented in a certain way or certain order for the code to work correctly
+
+- make it as clean and detailed as you can so it's easy for any other developer to come onto the project without any prior knowledge, and be able to work on it without any problems
+
+- keep documentation up to date
+
+- never code anything blindly - always have a complete understanding of what you are doing, what you're implementing, what the outcome will be, what the final goal is, what dependencies and resources are needed, what's compatible with each other, and what's proven to work 

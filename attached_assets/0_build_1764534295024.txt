@@ -1,0 +1,545 @@
+﻿2025-11-30T20:20:52.3048848Z Current runner version: '2.329.0'
+2025-11-30T20:20:52.3085463Z ##[group]Runner Image Provisioner
+2025-11-30T20:20:52.3118725Z Hosted Compute Agent
+2025-11-30T20:20:52.3119673Z Version: 20251016.436
+2025-11-30T20:20:52.3120770Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+2025-11-30T20:20:52.3122011Z Build Date: 2025-10-15T20:44:12Z
+2025-11-30T20:20:52.3123037Z ##[endgroup]
+2025-11-30T20:20:52.3124050Z ##[group]Operating System
+2025-11-30T20:20:52.3125096Z Ubuntu
+2025-11-30T20:20:52.3125843Z 24.04.3
+2025-11-30T20:20:52.3127056Z LTS
+2025-11-30T20:20:52.3127879Z ##[endgroup]
+2025-11-30T20:20:52.3128665Z ##[group]Runner Image
+2025-11-30T20:20:52.3129713Z Image: ubuntu-24.04
+2025-11-30T20:20:52.3130565Z Version: 20251112.124.1
+2025-11-30T20:20:52.3132279Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251112.124/images/ubuntu/Ubuntu2404-Readme.md
+2025-11-30T20:20:52.3134967Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251112.124
+2025-11-30T20:20:52.3157112Z ##[endgroup]
+2025-11-30T20:20:52.3161704Z ##[group]GITHUB_TOKEN Permissions
+2025-11-30T20:20:52.3165194Z Actions: write
+2025-11-30T20:20:52.3166544Z ArtifactMetadata: write
+2025-11-30T20:20:52.3167579Z Attestations: write
+2025-11-30T20:20:52.3168448Z Checks: write
+2025-11-30T20:20:52.3169477Z Contents: write
+2025-11-30T20:20:52.3170317Z Deployments: write
+2025-11-30T20:20:52.3171217Z Discussions: write
+2025-11-30T20:20:52.3172212Z Issues: write
+2025-11-30T20:20:52.3172969Z Metadata: read
+2025-11-30T20:20:52.3173729Z Models: read
+2025-11-30T20:20:52.3174616Z Packages: write
+2025-11-30T20:20:52.3175446Z Pages: write
+2025-11-30T20:20:52.3196744Z PullRequests: write
+2025-11-30T20:20:52.3197901Z RepositoryProjects: write
+2025-11-30T20:20:52.3199138Z SecurityEvents: write
+2025-11-30T20:20:52.3200098Z Statuses: write
+2025-11-30T20:20:52.3201089Z ##[endgroup]
+2025-11-30T20:20:52.3204304Z Secret source: Actions
+2025-11-30T20:20:52.3205430Z Prepare workflow directory
+2025-11-30T20:20:52.3834397Z Prepare all required actions
+2025-11-30T20:20:52.3916562Z Getting action download info
+2025-11-30T20:20:52.8230954Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2025-11-30T20:20:53.9445053Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-11-30T20:20:54.0858433Z Download action repository 'expo/expo-github-action@v8' (SHA:c7b66a9c327a43a8fa7c0158e7f30d6040d2481e)
+2025-11-30T20:20:55.3114595Z Complete job name: build
+2025-11-30T20:20:55.3759968Z ##[group]Run actions/checkout@v4
+2025-11-30T20:20:55.3760592Z with:
+2025-11-30T20:20:55.3760850Z   repository: iHagoss/tVLCplayer
+2025-11-30T20:20:55.3761349Z   token: ***
+2025-11-30T20:20:55.3761629Z   ssh-strict: true
+2025-11-30T20:20:55.3761866Z   ssh-user: git
+2025-11-30T20:20:55.3762103Z   persist-credentials: true
+2025-11-30T20:20:55.3762370Z   clean: true
+2025-11-30T20:20:55.3762623Z   sparse-checkout-cone-mode: true
+2025-11-30T20:20:55.3762910Z   fetch-depth: 1
+2025-11-30T20:20:55.3763170Z   fetch-tags: false
+2025-11-30T20:20:55.3763412Z   show-progress: true
+2025-11-30T20:20:55.3763663Z   lfs: false
+2025-11-30T20:20:55.3763882Z   submodules: false
+2025-11-30T20:20:55.3764120Z   set-safe-directory: true
+2025-11-30T20:20:55.3764601Z ##[endgroup]
+2025-11-30T20:20:55.4927978Z Syncing repository: iHagoss/tVLCplayer
+2025-11-30T20:20:55.4929899Z ##[group]Getting Git version info
+2025-11-30T20:20:55.4930597Z Working directory is '/home/runner/work/tVLCplayer/tVLCplayer'
+2025-11-30T20:20:55.4931715Z [command]/usr/bin/git version
+2025-11-30T20:20:55.5774965Z git version 2.51.2
+2025-11-30T20:20:55.5807280Z ##[endgroup]
+2025-11-30T20:20:55.5823100Z Temporarily overriding HOME='/home/runner/work/_temp/644a52cf-14bc-402f-8ad0-d7738729c6ed' before making global git config changes
+2025-11-30T20:20:55.5827050Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-30T20:20:55.5831243Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tVLCplayer/tVLCplayer
+2025-11-30T20:20:55.5905079Z Deleting the contents of '/home/runner/work/tVLCplayer/tVLCplayer'
+2025-11-30T20:20:55.5909793Z ##[group]Initializing the repository
+2025-11-30T20:20:55.5914969Z [command]/usr/bin/git init /home/runner/work/tVLCplayer/tVLCplayer
+2025-11-30T20:20:55.6422127Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-11-30T20:20:55.6423402Z hint: is subject to change. To configure the initial branch name to use in all
+2025-11-30T20:20:55.6424375Z hint: of your new repositories, which will suppress this warning, call:
+2025-11-30T20:20:55.6425078Z hint:
+2025-11-30T20:20:55.6425668Z hint: 	git config --global init.defaultBranch <name>
+2025-11-30T20:20:55.6426584Z hint:
+2025-11-30T20:20:55.6427194Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-11-30T20:20:55.6428177Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-11-30T20:20:55.6428872Z hint:
+2025-11-30T20:20:55.6429332Z hint: 	git branch -m <name>
+2025-11-30T20:20:55.6429768Z hint:
+2025-11-30T20:20:55.6430351Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-11-30T20:20:55.6454502Z Initialized empty Git repository in /home/runner/work/tVLCplayer/tVLCplayer/.git/
+2025-11-30T20:20:55.6468947Z [command]/usr/bin/git remote add origin https://github.com/iHagoss/tVLCplayer
+2025-11-30T20:20:55.6549362Z ##[endgroup]
+2025-11-30T20:20:55.6551076Z ##[group]Disabling automatic garbage collection
+2025-11-30T20:20:55.6555207Z [command]/usr/bin/git config --local gc.auto 0
+2025-11-30T20:20:55.6587054Z ##[endgroup]
+2025-11-30T20:20:55.6588304Z ##[group]Setting up auth
+2025-11-30T20:20:55.6595410Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-30T20:20:55.6628602Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-30T20:20:55.8227564Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-30T20:20:55.8289764Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-30T20:20:55.8651890Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-30T20:20:55.8710889Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-11-30T20:20:55.9060199Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-11-30T20:20:55.9139783Z ##[endgroup]
+2025-11-30T20:20:55.9148163Z ##[group]Fetching the repository
+2025-11-30T20:20:55.9161863Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f2f941f5923a3bb2f5e0b491b2d0c222309fe7eb:refs/remotes/origin/main
+2025-11-30T20:20:56.7010457Z From https://github.com/iHagoss/tVLCplayer
+2025-11-30T20:20:56.7011163Z  * [new ref]         f2f941f5923a3bb2f5e0b491b2d0c222309fe7eb -> origin/main
+2025-11-30T20:20:56.7084832Z ##[endgroup]
+2025-11-30T20:20:56.7087156Z ##[group]Determining the checkout info
+2025-11-30T20:20:56.7087823Z ##[endgroup]
+2025-11-30T20:20:56.7090850Z [command]/usr/bin/git sparse-checkout disable
+2025-11-30T20:20:56.7169411Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-11-30T20:20:56.7198916Z ##[group]Checking out the ref
+2025-11-30T20:20:56.7202680Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-11-30T20:20:56.7400193Z Switched to a new branch 'main'
+2025-11-30T20:20:56.7402764Z branch 'main' set up to track 'origin/main'.
+2025-11-30T20:20:56.7410189Z ##[endgroup]
+2025-11-30T20:20:56.7450202Z [command]/usr/bin/git log -1 --format=%H
+2025-11-30T20:20:56.7474047Z f2f941f5923a3bb2f5e0b491b2d0c222309fe7eb
+2025-11-30T20:20:56.7710626Z ##[group]Run actions/setup-node@v4
+2025-11-30T20:20:56.7710925Z with:
+2025-11-30T20:20:56.7711100Z   node-version: 20
+2025-11-30T20:20:56.7711286Z   always-auth: false
+2025-11-30T20:20:56.7711480Z   check-latest: false
+2025-11-30T20:20:56.7711800Z   token: ***
+2025-11-30T20:20:56.7711977Z ##[endgroup]
+2025-11-30T20:20:57.0163433Z Found in cache @ /opt/hostedtoolcache/node/20.19.5/x64
+2025-11-30T20:20:57.0169694Z ##[group]Environment details
+2025-11-30T20:20:58.9808839Z node: v20.19.5
+2025-11-30T20:20:58.9810999Z npm: 10.8.2
+2025-11-30T20:20:58.9812944Z yarn: 1.22.22
+2025-11-30T20:20:58.9813680Z ##[endgroup]
+2025-11-30T20:20:58.9924675Z ##[group]Run npm install
+2025-11-30T20:20:58.9925021Z [36;1mnpm install[0m
+2025-11-30T20:20:58.9969952Z shell: /usr/bin/bash -e {0}
+2025-11-30T20:20:58.9970258Z ##[endgroup]
+2025-11-30T20:21:04.5504198Z npm warn deprecated sudo-prompt@9.1.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2025-11-30T20:21:04.9181304Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2025-11-30T20:21:05.9188042Z npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+2025-11-30T20:21:06.2666207Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-11-30T20:21:08.7866538Z npm warn deprecated @oclif/screen@3.0.8: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2025-11-30T20:21:10.4942809Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T20:21:10.7334852Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T20:21:10.7342439Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T20:21:10.8736756Z npm warn deprecated rimraf@2.4.5: Rimraf versions prior to v4 are no longer supported
+2025-11-30T20:21:10.9723745Z npm warn deprecated glob@6.0.4: Glob versions prior to v9 are no longer supported
+2025-11-30T20:21:12.2342038Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T20:21:12.6470634Z npm warn deprecated @xmldom/xmldom@0.7.13: this version is no longer supported, please update to at least 0.8.*
+2025-11-30T20:21:23.8629828Z 
+2025-11-30T20:21:23.8632493Z added 1320 packages, and audited 1321 packages in 25s
+2025-11-30T20:21:23.8639440Z 
+2025-11-30T20:21:23.8639804Z 200 packages are looking for funding
+2025-11-30T20:21:23.8640306Z   run `npm fund` for details
+2025-11-30T20:21:23.8703211Z 
+2025-11-30T20:21:23.8708060Z 4 vulnerabilities (1 moderate, 3 high)
+2025-11-30T20:21:23.8711339Z 
+2025-11-30T20:21:23.8713917Z To address issues that do not require attention, run:
+2025-11-30T20:21:23.8717041Z   npm audit fix
+2025-11-30T20:21:23.8719278Z 
+2025-11-30T20:21:23.8720850Z To address all issues (including breaking changes), run:
+2025-11-30T20:21:23.8722701Z   npm audit fix --force
+2025-11-30T20:21:23.8727300Z 
+2025-11-30T20:21:23.8728626Z Run `npm audit` for details.
+2025-11-30T20:21:23.9206938Z ##[group]Run expo/expo-github-action@v8
+2025-11-30T20:21:23.9207391Z with:
+2025-11-30T20:21:23.9207671Z   eas-version: latest
+2025-11-30T20:21:23.9208184Z   token: ***
+2025-11-30T20:21:23.9208479Z   expo-cache: true
+2025-11-30T20:21:23.9208781Z   eas-cache: true
+2025-11-30T20:21:23.9209078Z   packager: yarn
+2025-11-30T20:21:23.9209385Z   patch-watchers: true
+2025-11-30T20:21:23.9209760Z ##[endgroup]
+2025-11-30T20:21:24.0771701Z Skipped installing expo-cli: 'expo-version' not provided.
+2025-11-30T20:21:24.6757723Z ##[group]Installing eas-cli (16.28.0) from cache or with yarn
+2025-11-30T20:21:24.7788435Z ##[warning]Failed to restore: Cache service responded with 400
+2025-11-30T20:21:24.7801209Z [command]/usr/local/bin/yarn add eas-cli@16.28.0
+2025-11-30T20:21:24.9047968Z yarn add v1.22.22
+2025-11-30T20:21:24.9184492Z info No lockfile found.
+2025-11-30T20:21:24.9348697Z [1/4] Resolving packages...
+2025-11-30T20:21:26.2791077Z warning eas-cli > @expo/plist > @xmldom/xmldom@0.7.13: this version is no longer supported, please update to at least 0.8.*
+2025-11-30T20:21:26.2794907Z warning eas-cli > @expo/config-plugins > @expo/plist > @xmldom/xmldom@0.7.13: this version is no longer supported, please update to at least 0.8.*
+2025-11-30T20:21:26.3480449Z warning eas-cli > @oclif/core > @oclif/screen@3.0.8: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2025-11-30T20:21:26.4740811Z warning eas-cli > @expo/steps > lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+2025-11-30T20:21:26.5953946Z warning eas-cli > @expo/package-manager > sudo-prompt@9.1.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2025-11-30T20:21:26.9354034Z warning eas-cli > @expo/logger > bunyan > mv > rimraf@2.4.5: Rimraf versions prior to v4 are no longer supported
+2025-11-30T20:21:26.9377427Z warning eas-cli > @expo/logger > bunyan > mv > rimraf > glob@6.0.4: Glob versions prior to v9 are no longer supported
+2025-11-30T20:21:27.3930298Z warning eas-cli > @expo/logger > bunyan > mv > rimraf > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-11-30T20:21:27.5723885Z [2/4] Fetching packages...
+2025-11-30T20:21:33.9009780Z [3/4] Linking dependencies...
+2025-11-30T20:21:33.9027326Z warning "eas-cli > @expo/plugin-help > @oclif/core > ts-node@10.9.2" has unmet peer dependency "@types/node@*".
+2025-11-30T20:21:33.9028873Z warning "eas-cli > @expo/plugin-help > @oclif/core > ts-node@10.9.2" has unmet peer dependency "typescript@>=2.7".
+2025-11-30T20:21:36.9641815Z [4/4] Building fresh packages...
+2025-11-30T20:21:37.3112150Z success Saved lockfile.
+2025-11-30T20:21:37.3468333Z success Saved 286 new dependencies.
+2025-11-30T20:21:37.3473062Z info Direct dependencies
+2025-11-30T20:21:37.3478094Z └─ eas-cli@16.28.0
+2025-11-30T20:21:37.3478911Z info All dependencies
+2025-11-30T20:21:37.3479801Z ├─ @0no-co/graphql.web@1.2.0
+2025-11-30T20:21:37.3480420Z ├─ @babel/helper-validator-identifier@7.28.5
+2025-11-30T20:21:37.3480958Z ├─ @babel/highlight@7.25.9
+2025-11-30T20:21:37.3481483Z ├─ @cspotcode/source-map-support@0.8.1
+2025-11-30T20:21:37.3481994Z ├─ @expo/apple-utils@2.1.12
+2025-11-30T20:21:37.3482420Z ├─ @expo/bunyan@4.0.1
+2025-11-30T20:21:37.3482967Z ├─ @expo/code-signing-certificates@0.0.5
+2025-11-30T20:21:37.3511766Z ├─ @expo/config-plugins@9.0.17
+2025-11-30T20:21:37.3512330Z ├─ @expo/config@10.0.6
+2025-11-30T20:21:37.3512836Z ├─ @expo/eas-json@16.25.0
+2025-11-30T20:21:37.3513309Z ├─ @expo/env@1.0.7
+2025-11-30T20:21:37.3513765Z ├─ @expo/image-utils@0.6.5
+2025-11-30T20:21:37.3514312Z ├─ @expo/json-file@9.1.5
+2025-11-30T20:21:37.3514931Z ├─ @expo/multipart-body-parser@2.0.0
+2025-11-30T20:21:37.3515521Z ├─ @expo/osascript@2.1.4
+2025-11-30T20:21:37.3516287Z ├─ @expo/package-manager@1.7.0
+2025-11-30T20:21:37.3517340Z ├─ @expo/pkcs12@0.1.3
+2025-11-30T20:21:37.3517881Z ├─ @expo/plist@0.2.2
+2025-11-30T20:21:37.3518383Z ├─ @expo/plugin-help@5.1.23
+2025-11-30T20:21:37.3519072Z ├─ @expo/plugin-warn-if-update-available@2.5.1
+2025-11-30T20:21:37.3519773Z ├─ @expo/prebuild-config@8.0.17
+2025-11-30T20:21:37.3520307Z ├─ @expo/results@1.0.0
+2025-11-30T20:21:37.3520821Z ├─ @expo/rudder-sdk-node@1.1.1
+2025-11-30T20:21:37.3521346Z ├─ @expo/steps@1.0.231
+2025-11-30T20:21:37.3521867Z ├─ @expo/timeago.js@1.0.0
+2025-11-30T20:21:37.3522455Z ├─ @hapi/topo@5.1.0
+2025-11-30T20:21:37.3522908Z ├─ @isaacs/cliui@8.0.2
+2025-11-30T20:21:37.3523439Z ├─ @jridgewell/gen-mapping@0.3.13
+2025-11-30T20:21:37.3524058Z ├─ @jridgewell/resolve-uri@3.1.2
+2025-11-30T20:21:37.3524679Z ├─ @jridgewell/sourcemap-codec@1.5.5
+2025-11-30T20:21:37.3525681Z ├─ @jridgewell/trace-mapping@0.3.9
+2025-11-30T20:21:37.3526545Z ├─ @nodelib/fs.scandir@2.1.5
+2025-11-30T20:21:37.3527063Z ├─ @nodelib/fs.stat@2.0.5
+2025-11-30T20:21:37.3527559Z ├─ @oclif/linewrap@1.0.0
+2025-11-30T20:21:37.3528142Z ├─ @oclif/plugin-autocomplete@2.3.10
+2025-11-30T20:21:37.3528676Z ├─ @oclif/screen@3.0.8
+2025-11-30T20:21:37.3529156Z ├─ @pkgjs/parseargs@0.11.0
+2025-11-30T20:21:37.3529748Z ├─ @react-native/normalize-colors@0.76.2
+2025-11-30T20:21:37.3530367Z ├─ @segment/ajv-human-errors@2.15.0
+2025-11-30T20:21:37.3530967Z ├─ @segment/loosely-validate-event@2.0.0
+2025-11-30T20:21:37.3531481Z ├─ @sideway/address@4.1.5
+2025-11-30T20:21:37.3531923Z ├─ @tsconfig/node10@1.0.12
+2025-11-30T20:21:37.3532362Z ├─ @tsconfig/node12@1.0.11
+2025-11-30T20:21:37.3532790Z ├─ @tsconfig/node14@1.0.3
+2025-11-30T20:21:37.3533213Z ├─ @tsconfig/node16@1.0.4
+2025-11-30T20:21:37.3533634Z ├─ @types/bunyan@1.8.11
+2025-11-30T20:21:37.3534098Z ├─ @types/cli-progress@3.11.6
+2025-11-30T20:21:37.3534541Z ├─ @urql/core@4.0.11
+2025-11-30T20:21:37.3534998Z ├─ @urql/exchange-retry@1.2.0
+2025-11-30T20:21:37.3535452Z ├─ acorn-walk@8.3.4
+2025-11-30T20:21:37.3535814Z ├─ acorn@8.15.0
+2025-11-30T20:21:37.3536461Z ├─ agent-base@6.0.2
+2025-11-30T20:21:37.3536874Z ├─ ajv-formats@2.1.1
+2025-11-30T20:21:37.3537235Z ├─ ajv@8.11.0
+2025-11-30T20:21:37.3537608Z ├─ ansicolors@0.3.2
+2025-11-30T20:21:37.3537956Z ├─ arg@4.1.3
+2025-11-30T20:21:37.3538316Z ├─ argparse@1.0.10
+2025-11-30T20:21:37.3538728Z ├─ array-union@2.1.0
+2025-11-30T20:21:37.3539115Z ├─ asn1@0.2.6
+2025-11-30T20:21:37.3539508Z ├─ astral-regex@2.0.0
+2025-11-30T20:21:37.3540014Z ├─ async@3.2.6
+2025-11-30T20:21:37.3540465Z ├─ asynckit@0.4.0
+2025-11-30T20:21:37.3540899Z ├─ balanced-match@1.0.2
+2025-11-30T20:21:37.3541327Z ├─ bare-events@2.8.2
+2025-11-30T20:21:37.3541747Z ├─ base64-js@1.5.1
+2025-11-30T20:21:37.3542171Z ├─ better-opn@3.0.2
+2025-11-30T20:21:37.3542569Z ├─ bplist-creator@0.1.0
+2025-11-30T20:21:37.3543029Z ├─ bplist-parser@0.3.2
+2025-11-30T20:21:37.3543453Z ├─ braces@3.0.3
+2025-11-30T20:21:37.3544012Z ├─ buffer-equal-constant-time@1.0.1
+2025-11-30T20:21:37.3544523Z ├─ bunyan@1.8.15
+2025-11-30T20:21:37.3544988Z ├─ call-bind-apply-helpers@1.0.2
+2025-11-30T20:21:37.3545413Z ├─ charenc@0.0.2
+2025-11-30T20:21:37.3545762Z ├─ chownr@2.0.0
+2025-11-30T20:21:37.3550591Z ├─ cli-cursor@3.1.0
+2025-11-30T20:21:37.3551127Z ├─ cli-progress@3.12.0
+2025-11-30T20:21:37.3551557Z ├─ cli-spinners@2.9.2
+2025-11-30T20:21:37.3551940Z ├─ clone@1.0.4
+2025-11-30T20:21:37.3552329Z ├─ color-convert@2.0.1
+2025-11-30T20:21:37.3552737Z ├─ color-name@1.1.4
+2025-11-30T20:21:37.3553149Z ├─ combined-stream@1.0.8
+2025-11-30T20:21:37.3553574Z ├─ commander@4.1.1
+2025-11-30T20:21:37.3553975Z ├─ component-type@1.2.2
+2025-11-30T20:21:37.3554407Z ├─ concat-map@0.0.1
+2025-11-30T20:21:37.3554806Z ├─ content-type@1.0.5
+2025-11-30T20:21:37.3555228Z ├─ create-require@1.1.1
+2025-11-30T20:21:37.3555651Z ├─ cross-spawn@7.0.6
+2025-11-30T20:21:37.3556216Z ├─ crypt@0.0.2
+2025-11-30T20:21:37.3556728Z ├─ crypto-random-string@2.0.0
+2025-11-30T20:21:37.3557219Z ├─ dateformat@4.6.3
+2025-11-30T20:21:37.3557582Z ├─ debug@4.4.3
+2025-11-30T20:21:37.3557950Z ├─ defaults@1.0.4
+2025-11-30T20:21:37.3558371Z ├─ define-lazy-prop@2.0.0
+2025-11-30T20:21:37.3559007Z ├─ delayed-stream@1.0.0
+2025-11-30T20:21:37.3559397Z ├─ diff@7.0.0
+2025-11-30T20:21:37.3559765Z ├─ dir-glob@3.0.1
+2025-11-30T20:21:37.3560117Z ├─ domino@2.1.6
+2025-11-30T20:21:37.3560508Z ├─ dotenv-expand@11.0.7
+2025-11-30T20:21:37.3560897Z ├─ dotenv@16.3.1
+2025-11-30T20:21:37.3561308Z ├─ dtrace-provider@0.8.8
+2025-11-30T20:21:37.3561740Z ├─ dunder-proto@1.0.1
+2025-11-30T20:21:37.3562150Z ├─ eas-cli@16.28.0
+2025-11-30T20:21:37.3562550Z ├─ eastasianwidth@0.2.0
+2025-11-30T20:21:37.3562995Z ├─ ecdsa-sig-formatter@1.0.11
+2025-11-30T20:21:37.3563421Z ├─ ejs@3.1.10
+2025-11-30T20:21:37.3563788Z ├─ env-paths@2.2.0
+2025-11-30T20:21:37.3564175Z ├─ env-string@1.0.1
+2025-11-30T20:21:37.3564564Z ├─ envinfo@7.11.0
+2025-11-30T20:21:37.3564945Z ├─ err-code@2.0.3
+2025-11-30T20:21:37.3565315Z ├─ error-ex@1.3.4
+2025-11-30T20:21:37.3565905Z ├─ es-define-property@1.0.1
+2025-11-30T20:21:37.3566626Z ├─ es-object-atoms@1.1.1
+2025-11-30T20:21:37.3567077Z ├─ es-set-tostringtag@2.1.0
+2025-11-30T20:21:37.3567489Z ├─ esprima@4.0.1
+2025-11-30T20:21:37.3567917Z ├─ events-universal@1.0.1
+2025-11-30T20:21:37.3568345Z ├─ exec-async@2.2.0
+2025-11-30T20:21:37.3568754Z ├─ fast-deep-equal@3.1.3
+2025-11-30T20:21:37.3569161Z ├─ fast-fifo@1.3.2
+2025-11-30T20:21:37.3569512Z ├─ fast-glob@3.3.2
+2025-11-30T20:21:37.3569875Z ├─ fast-uri@3.1.0
+2025-11-30T20:21:37.3570214Z ├─ fastq@1.19.1
+2025-11-30T20:21:37.3570570Z ├─ fetch-retry@4.1.1
+2025-11-30T20:21:37.3570926Z ├─ figures@3.2.0
+2025-11-30T20:21:37.3571278Z ├─ filelist@1.0.4
+2025-11-30T20:21:37.3571635Z ├─ fill-range@7.1.1
+2025-11-30T20:21:37.3571979Z ├─ find-up@4.1.0
+2025-11-30T20:21:37.3572369Z ├─ foreground-child@3.3.1
+2025-11-30T20:21:37.3572765Z ├─ form-data@4.0.5
+2025-11-30T20:21:37.3573136Z ├─ fs-minipass@2.1.0
+2025-11-30T20:21:37.3573525Z ├─ get-intrinsic@1.3.0
+2025-11-30T20:21:37.3573949Z ├─ get-proto@1.0.1
+2025-11-30T20:21:37.3574325Z ├─ glob@10.5.0
+2025-11-30T20:21:37.3574739Z ├─ golden-fleece@1.0.9
+2025-11-30T20:21:37.3575209Z ├─ gradle-to-js@2.0.1
+2025-11-30T20:21:37.3575660Z ├─ graphql-tag@2.12.6
+2025-11-30T20:21:37.3576317Z ├─ graphql@16.8.1
+2025-11-30T20:21:37.3576769Z ├─ has-symbols@1.1.0
+2025-11-30T20:21:37.3577238Z ├─ has-tostringtag@1.0.2
+2025-11-30T20:21:37.3577714Z ├─ hosted-git-info@7.0.2
+2025-11-30T20:21:37.3578125Z ├─ http-call@5.3.0
+2025-11-30T20:21:37.3578507Z ├─ https-proxy-agent@5.0.1
+2025-11-30T20:21:37.3578906Z ├─ ignore@5.3.0
+2025-11-30T20:21:37.3579272Z ├─ imurmurhash@0.1.4
+2025-11-30T20:21:37.3579661Z ├─ inflight@1.0.6
+2025-11-30T20:21:37.3580010Z ├─ inherits@2.0.4
+2025-11-30T20:21:37.3580324Z ├─ is-arrayish@0.2.1
+2025-11-30T20:21:37.3580654Z ├─ is-buffer@1.1.6
+2025-11-30T20:21:37.3581002Z ├─ is-docker@2.2.1
+2025-11-30T20:21:37.3582138Z ├─ is-extglob@2.1.1
+2025-11-30T20:21:37.3582473Z ├─ is-glob@4.0.3
+2025-11-30T20:21:37.3582834Z ├─ is-interactive@1.0.0
+2025-11-30T20:21:37.3583216Z ├─ is-number@7.0.0
+2025-11-30T20:21:37.3583583Z ├─ is-retry-allowed@1.2.0
+2025-11-30T20:21:37.3583965Z ├─ is-stream@2.0.1
+2025-11-30T20:21:37.3584340Z ├─ is-unicode-supported@0.1.0
+2025-11-30T20:21:37.3584737Z ├─ isexe@2.0.0
+2025-11-30T20:21:37.3585070Z ├─ jackspeak@3.4.3
+2025-11-30T20:21:37.3585373Z ├─ jake@10.9.4
+2025-11-30T20:21:37.3585722Z ├─ jimp-compact@0.16.1
+2025-11-30T20:21:37.3586250Z ├─ jks-js@1.1.0
+2025-11-30T20:21:37.3586628Z ├─ join-component@1.1.0
+2025-11-30T20:21:37.3587013Z ├─ js-tokens@4.0.0
+2025-11-30T20:21:37.3587365Z ├─ js-yaml@3.14.2
+2025-11-30T20:21:37.3587679Z ├─ jsep@1.4.0
+2025-11-30T20:21:37.3588115Z ├─ json-parse-better-errors@1.0.2
+2025-11-30T20:21:37.3588564Z ├─ jsonwebtoken@9.0.0
+2025-11-30T20:21:37.3588893Z ├─ jwa@1.4.2
+2025-11-30T20:21:37.3589191Z ├─ jws@3.2.2
+2025-11-30T20:21:37.3589519Z ├─ keychain@1.5.0
+2025-11-30T20:21:37.3589837Z ├─ kleur@3.0.3
+2025-11-30T20:21:37.3590201Z ├─ lines-and-columns@1.2.4
+2025-11-30T20:21:37.3590604Z ├─ locate-path@5.0.0
+2025-11-30T20:21:37.3591014Z ├─ lodash.clonedeep@4.5.0
+2025-11-30T20:21:37.3591400Z ├─ lodash.get@4.4.2
+2025-11-30T20:21:37.3591768Z ├─ lodash.merge@4.6.2
+2025-11-30T20:21:37.3592129Z ├─ lodash@4.17.21
+2025-11-30T20:21:37.3592712Z ├─ lru-cache@10.4.3
+2025-11-30T20:21:37.3593093Z ├─ make-error@1.3.6
+2025-11-30T20:21:37.3593464Z ├─ math-intrinsics@1.1.0
+2025-11-30T20:21:37.3593817Z ├─ md5@2.3.0
+2025-11-30T20:21:37.3594146Z ├─ mime-db@1.52.0
+2025-11-30T20:21:37.3594499Z ├─ mime-types@2.1.35
+2025-11-30T20:21:37.3594832Z ├─ mime@3.0.0
+2025-11-30T20:21:37.3595173Z ├─ mimic-fn@2.1.0
+2025-11-30T20:21:37.3595535Z ├─ minimatch@5.1.2
+2025-11-30T20:21:37.3595894Z ├─ minimist@1.2.8
+2025-11-30T20:21:37.3599308Z ├─ minipass@7.1.2
+2025-11-30T20:21:37.3599653Z ├─ minizlib@3.0.1
+2025-11-30T20:21:37.3599995Z ├─ mkdirp@1.0.4
+2025-11-30T20:21:37.3600320Z ├─ moment@2.30.1
+2025-11-30T20:21:37.3600630Z ├─ ms@2.1.3
+2025-11-30T20:21:37.3600959Z ├─ multipasta@0.2.7
+2025-11-30T20:21:37.3601451Z ├─ mute-stream@0.0.8
+2025-11-30T20:21:37.3602004Z ├─ mv@2.1.1
+2025-11-30T20:21:37.3602297Z ├─ mz@2.7.0
+2025-11-30T20:21:37.3602590Z ├─ nan@2.23.1
+2025-11-30T20:21:37.3602897Z ├─ nanoid@3.3.8
+2025-11-30T20:21:37.3603198Z ├─ ncp@2.0.0
+2025-11-30T20:21:37.3603546Z ├─ node-fetch@2.6.7
+2025-11-30T20:21:37.3603896Z ├─ node-int64@0.4.0
+2025-11-30T20:21:37.3604208Z ├─ node-rsa@1.1.1
+2025-11-30T20:21:37.3604567Z ├─ node-stream-zip@1.15.0
+2025-11-30T20:21:37.3604979Z ├─ npm-package-arg@11.0.3
+2025-11-30T20:21:37.3605374Z ├─ nullthrows@1.1.1
+2025-11-30T20:21:37.3605753Z ├─ object-assign@4.1.1
+2025-11-30T20:21:37.3606289Z ├─ onetime@5.1.2
+2025-11-30T20:21:37.3606637Z ├─ open@8.4.2
+2025-11-30T20:21:37.3606954Z ├─ ora@5.1.0
+2025-11-30T20:21:37.3607276Z ├─ p-limit@2.3.0
+2025-11-30T20:21:37.3607628Z ├─ p-locate@4.1.0
+2025-11-30T20:21:37.3607959Z ├─ p-try@2.2.0
+2025-11-30T20:21:37.3608399Z ├─ package-json-from-dist@1.0.1
+2025-11-30T20:21:37.3608838Z ├─ parse-json@4.0.0
+2025-11-30T20:21:37.3609212Z ├─ parse-png@2.1.0
+2025-11-30T20:21:37.3610455Z ├─ path-is-absolute@1.0.1
+2025-11-30T20:21:37.3610889Z ├─ path-key@3.1.1
+2025-11-30T20:21:37.3611270Z ├─ path-scurry@1.11.1
+2025-11-30T20:21:37.3611655Z ├─ path-type@4.0.0
+2025-11-30T20:21:37.3612023Z ├─ picocolors@1.1.1
+2025-11-30T20:21:37.3612410Z ├─ picomatch@2.3.1
+2025-11-30T20:21:37.3612759Z ├─ pirates@4.0.7
+2025-11-30T20:21:37.3613093Z ├─ pkg-dir@4.2.0
+2025-11-30T20:21:37.3613429Z ├─ plist@3.1.0
+2025-11-30T20:21:37.3613766Z ├─ pngjs@7.0.0
+2025-11-30T20:21:37.3614113Z ├─ proc-log@4.2.0
+2025-11-30T20:21:37.3614503Z ├─ promise-limit@2.7.0
+2025-11-30T20:21:37.3614908Z ├─ promise-retry@2.0.1
+2025-11-30T20:21:37.3615274Z ├─ prompts@2.4.2
+2025-11-30T20:21:37.3615642Z ├─ punycode@2.3.1
+2025-11-30T20:21:37.3616288Z ├─ qrcode-terminal@0.12.0
+2025-11-30T20:21:37.3616753Z ├─ queue-microtask@1.2.3
+2025-11-30T20:21:37.3617135Z ├─ redeyed@2.1.1
+2025-11-30T20:21:37.3617578Z ├─ remove-trailing-slash@0.1.1
+2025-11-30T20:21:37.3618027Z ├─ restore-cursor@3.1.0
+2025-11-30T20:21:37.3618403Z ├─ retry@0.12.0
+2025-11-30T20:21:37.3618760Z ├─ reusify@1.1.0
+2025-11-30T20:21:37.3619088Z ├─ rimraf@5.0.10
+2025-11-30T20:21:37.3619464Z ├─ run-parallel@1.2.0
+2025-11-30T20:21:37.3619896Z ├─ safe-json-stringify@1.2.0
+2025-11-30T20:21:37.3620327Z ├─ safer-buffer@2.1.2
+2025-11-30T20:21:37.3620694Z ├─ sax@1.4.3
+2025-11-30T20:21:37.3621076Z ├─ set-interval-async@3.0.3
+2025-11-30T20:21:37.3621514Z ├─ shebang-command@2.0.0
+2025-11-30T20:21:37.3621923Z ├─ shebang-regex@3.0.0
+2025-11-30T20:21:37.3622322Z ├─ simple-plist@1.3.1
+2025-11-30T20:21:37.3622698Z ├─ sisteransi@1.0.5
+2025-11-30T20:21:37.3623068Z ├─ slice-ansi@4.0.0
+2025-11-30T20:21:37.3623414Z ├─ split@1.0.1
+2025-11-30T20:21:37.3623771Z ├─ sprintf-js@1.0.3
+2025-11-30T20:21:37.3624160Z ├─ stream-buffers@2.2.0
+2025-11-30T20:21:37.3624551Z ├─ streamx@2.23.0
+2025-11-30T20:21:37.3624932Z ├─ string-width-cjs@4.2.3
+2025-11-30T20:21:37.3625364Z ├─ strip-ansi-cjs@6.0.1
+2025-11-30T20:21:37.3625774Z ├─ sudo-prompt@9.1.1
+2025-11-30T20:21:37.3626336Z ├─ supports-color@7.2.0
+2025-11-30T20:21:37.3626737Z ├─ tar-stream@3.1.7
+2025-11-30T20:21:37.3627288Z ├─ tar@6.2.1
+2025-11-30T20:21:37.3627624Z ├─ temp-dir@2.0.0
+2025-11-30T20:21:37.3627999Z ├─ text-decoder@1.2.3
+2025-11-30T20:21:37.3628397Z ├─ thenify-all@1.6.0
+2025-11-30T20:21:37.3628734Z ├─ thenify@3.3.1
+2025-11-30T20:21:37.3629249Z ├─ this-file@2.0.3
+2025-11-30T20:21:37.3629609Z ├─ through@2.3.8
+2025-11-30T20:21:37.3629982Z ├─ to-regex-range@5.0.1
+2025-11-30T20:21:37.3630338Z ├─ tr46@0.0.3
+2025-11-30T20:21:37.3630701Z ├─ ts-deepmerge@6.2.0
+2025-11-30T20:21:37.3631155Z ├─ ts-interface-checker@0.1.13
+2025-11-30T20:21:37.3631588Z ├─ ts-node@10.9.2
+2025-11-30T20:21:37.3631926Z ├─ tslib@2.8.1
+2025-11-30T20:21:37.3632283Z ├─ tunnel-agent@0.6.0
+2025-11-30T20:21:37.3632654Z ├─ turndown@7.1.2
+2025-11-30T20:21:37.3633021Z ├─ type-fest@0.21.3
+2025-11-30T20:21:37.3633397Z ├─ undici-types@7.16.0
+2025-11-30T20:21:37.3633798Z ├─ unique-string@2.0.0
+2025-11-30T20:21:37.3634185Z ├─ untildify@4.0.0
+2025-11-30T20:21:37.3634520Z ├─ uri-js@4.4.1
+2025-11-30T20:21:37.3634853Z ├─ uuid@8.3.2
+2025-11-30T20:21:37.3635268Z ├─ v8-compile-cache-lib@3.0.1
+2025-11-30T20:21:37.3635784Z ├─ validate-npm-package-name@5.0.1
+2025-11-30T20:21:37.3636521Z ├─ webidl-conversions@3.0.1
+2025-11-30T20:21:37.3636919Z ├─ which@2.0.2
+2025-11-30T20:21:37.3637282Z ├─ wordwrap@1.0.0
+2025-11-30T20:21:37.3637667Z ├─ wrap-ansi-cjs@7.0.0
+2025-11-30T20:21:37.3638025Z ├─ yaml@2.6.0
+2025-11-30T20:21:37.3638329Z ├─ yn@3.1.1
+2025-11-30T20:21:37.3638679Z └─ yocto-queue@0.1.0
+2025-11-30T20:21:37.3639020Z Done in 12.45s.
+2025-11-30T20:21:42.2458515Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/tVLCplayer/tVLCplayer --files-from manifest.txt --use-compress-program zstdmt
+2025-11-30T20:21:42.9192241Z ##[warning]Failed to save: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0VqcsaQAAAAD9lG12S5yxTYpRDViKo7qdUEhYMzFFREdFMDIwOQBFZGdl
+2025-11-30T20:21:42.9220159Z ##[endgroup]
+2025-11-30T20:21:42.9221773Z ##[group]Validating authenticated account
+2025-11-30T20:21:42.9241475Z [command]/opt/hostedtoolcache/eas-cli/16.28.0/x64/node_modules/.bin/eas whoami
+2025-11-30T20:21:43.8723220Z hagoss (authenticated using EXPO_TOKEN)
+2025-11-30T20:21:44.1438898Z ##[endgroup]
+2025-11-30T20:21:44.1440245Z ##[group]Patching system watchers for the 'ENOSPC' error
+2025-11-30T20:21:44.1453578Z [command]/usr/bin/sudo sysctl fs.inotify.max_user_instances=524288
+2025-11-30T20:21:44.1537426Z fs.inotify.max_user_instances = 524288
+2025-11-30T20:21:44.1572205Z [command]/usr/bin/sudo sysctl fs.inotify.max_user_watches=524288
+2025-11-30T20:21:44.1645729Z fs.inotify.max_user_watches = 524288
+2025-11-30T20:21:44.1673260Z [command]/usr/bin/sudo sysctl fs.inotify.max_queued_events=524288
+2025-11-30T20:21:44.1748514Z fs.inotify.max_queued_events = 524288
+2025-11-30T20:21:44.1773693Z [command]/usr/bin/sudo sysctl -p
+2025-11-30T20:21:44.1849731Z vm.max_map_count = 262144
+2025-11-30T20:21:44.1852350Z fs.inotify.max_user_watches = 655360
+2025-11-30T20:21:44.1852932Z fs.inotify.max_user_instances = 1280
+2025-11-30T20:21:44.1853394Z vm.mmap_rnd_bits = 28
+2025-11-30T20:21:44.1863125Z Patched system watchers for the `ENOSPC` error.
+2025-11-30T20:21:44.1864711Z ##[endgroup]
+2025-11-30T20:21:44.2011486Z ##[group]Run eas init --non-interactive || true
+2025-11-30T20:21:44.2011857Z [36;1meas init --non-interactive || true[0m
+2025-11-30T20:21:44.2045866Z shell: /usr/bin/bash -e {0}
+2025-11-30T20:21:44.2046216Z env:
+2025-11-30T20:21:44.2046535Z   EXPO_TOKEN: ***
+2025-11-30T20:21:44.2046713Z ##[endgroup]
+2025-11-30T20:21:45.0214705Z Found eas-cli in your project dependencies.
+2025-11-30T20:21:45.0222013Z It's recommended to use the "cli.version" field in eas.json to enforce the eas-cli version for your project.
+2025-11-30T20:21:45.0225060Z Learn more: https://github.com/expo/eas-cli#enforcing-eas-cli-version-for-your-project
+2025-11-30T20:21:45.0226862Z 
+2025-11-30T20:21:45.7608438Z ✔ Project already linked (ID: 12345678-1234-5678-1234-567812345678). To re-configure, remove the "extra.eas.projectId" field from your app config.
+2025-11-30T20:21:46.6877484Z Invalid UUID appId
+2025-11-30T20:21:46.6878117Z Request ID: 789b2d9a-f431-46d6-854f-afddaa4b8a8a
+2025-11-30T20:21:46.6905830Z     Error: GraphQL request failed.
+2025-11-30T20:21:46.7140356Z ##[group]Run eas build --platform android --profile preview --non-interactive
+2025-11-30T20:21:46.7141298Z [36;1meas build --platform android --profile preview --non-interactive[0m
+2025-11-30T20:21:46.7192364Z shell: /usr/bin/bash -e {0}
+2025-11-30T20:21:46.7192741Z env:
+2025-11-30T20:21:46.7193232Z   EXPO_TOKEN: ***
+2025-11-30T20:21:46.7193565Z ##[endgroup]
+2025-11-30T20:21:48.1055649Z Found eas-cli in your project dependencies.
+2025-11-30T20:21:48.1062485Z It's recommended to use the "cli.version" field in eas.json to enforce the eas-cli version for your project.
+2025-11-30T20:21:48.1064421Z Learn more: https://github.com/expo/eas-cli#enforcing-eas-cli-version-for-your-project
+2025-11-30T20:21:48.1066612Z 
+2025-11-30T20:21:49.0237200Z Invalid UUID appId
+2025-11-30T20:21:49.0238260Z Request ID: 4ba3f843-f121-46b0-a332-307be26ddd28
+2025-11-30T20:21:49.0300475Z     Error: GraphQL request failed.
+2025-11-30T20:21:49.0513011Z ##[error]Process completed with exit code 1.
+2025-11-30T20:21:49.0607555Z Post job cleanup.
+2025-11-30T20:21:49.1636684Z [command]/usr/bin/git version
+2025-11-30T20:21:49.1676579Z git version 2.51.2
+2025-11-30T20:21:49.1723254Z Temporarily overriding HOME='/home/runner/work/_temp/74de4bc0-1eb8-42cb-8cbe-f19c8f8dc690' before making global git config changes
+2025-11-30T20:21:49.1727089Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-30T20:21:49.1730088Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tVLCplayer/tVLCplayer
+2025-11-30T20:21:49.1772946Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-30T20:21:49.1808039Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-30T20:21:49.2049837Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-30T20:21:49.2074240Z http.https://github.com/.extraheader
+2025-11-30T20:21:49.2089019Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-11-30T20:21:49.2122709Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-30T20:21:49.2431884Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-30T20:21:49.2443683Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-11-30T20:21:49.3056216Z Cleaning up orphan processes
+2025-11-30T20:21:49.3430618Z Terminate orphan process: pid (2237) (node)

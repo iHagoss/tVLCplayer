@@ -1,0 +1,14 @@
+﻿2025-11-30T20:21:46.7140342Z ##[group]Run eas build --platform android --profile preview --non-interactive
+2025-11-30T20:21:46.7141289Z [36;1meas build --platform android --profile preview --non-interactive[0m
+2025-11-30T20:21:46.7192354Z shell: /usr/bin/bash -e {0}
+2025-11-30T20:21:46.7192736Z env:
+2025-11-30T20:21:46.7193225Z   EXPO_TOKEN: ***
+2025-11-30T20:21:46.7193559Z ##[endgroup]
+2025-11-30T20:21:48.1055603Z Found eas-cli in your project dependencies.
+2025-11-30T20:21:48.1062470Z It's recommended to use the "cli.version" field in eas.json to enforce the eas-cli version for your project.
+2025-11-30T20:21:48.1064406Z Learn more: https://github.com/expo/eas-cli#enforcing-eas-cli-version-for-your-project
+2025-11-30T20:21:48.1066599Z 
+2025-11-30T20:21:49.0237158Z Invalid UUID appId
+2025-11-30T20:21:49.0238253Z Request ID: 4ba3f843-f121-46b0-a332-307be26ddd28
+2025-11-30T20:21:49.0300461Z     Error: GraphQL request failed.
+2025-11-30T20:21:49.0512993Z ##[error]Process completed with exit code 1.

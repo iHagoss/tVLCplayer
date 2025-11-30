@@ -1,0 +1,18 @@
+StreamPlayer Hit a Snag
+Something unexpected happened. Let's get you back to your content.
+Restart StreamPlayer
+Error Details
+Error: Couldn't find a 'component', 'getComponent' or 'children' prop for the screen 'Player'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.
+
+Stack Trace:
+Error: Couldn't find a 'component', 'getComponent' or 'children' prop for the screen 'Player'. This can happen if you passed 'undefined'. You likely forgot to export your component from the file it's defined in, or mixed up default import and named import when importing.
+    at https://099ae047-c72a-4d6d-9a4d-323d0833da38-00-jyabmivet2yi.worf.replit.dev/index.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&transform.reactCompiler=true&unstable_transformProfile=hermes-stable:32618:17
+    at Array.forEach (<anonymous>)
+    at getRouteConfigsFromChildren (https://099ae047-c72a-4d6d-9a4d-323d0833da38-00-jyabmivet2yi.worf.replit.dev/index.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&transform.reactCompiler=true&unstable_transformProfile=hermes-stable:32581:15)
+    at useNavigationBuilder (https://099ae047-c72a-4d6d-9a4d-323d0833da38-00-jyabmivet2yi.worf.replit.dev/index.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&transform.reactCompiler=true&unstable_transformProfile=hermes-stable:32658:26)
+    at NativeStackNavigator (https://099ae047-c72a-4d6d-9a4d-323d0833da38-00-jyabmivet2yi.worf.replit.dev/index.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&transform.reactCompiler=true&unstable_transformProfile=hermes-stable:118291:57)
+    at react-stack-bottom-frame (https://099ae047-c72a-4d6d-9a4d-323d0833da38-00-jyabmivet2yi.worf.replit.dev/index.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&transform.reactCompiler=true&unstable_transformProfile=hermes-stable:17840:20)
+    at renderWithHooks (https://099ae047-c72a-4d6d-9a4d-323d0833da38-00-jyabmivet2yi.worf.replit.dev/index.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&transform.reactCompiler=true&unstable_transformProfile=hermes-stable:8050:22)
+    at updateFunctionComponent (https://099ae047-c72a-4d6d-9a4d-323d0833da38-00-jyabmivet2yi.worf.replit.dev/index.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&transform.reactCompiler=true&unstable_transformProfile=hermes-stable:9743:19)
+    at beginWork (https://099ae047-c72a-4d6d-9a4d-323d0833da38-00-jyabmivet2yi.worf.replit.dev/index.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&transform.reactCompiler=true&unstable_transformProfile=hermes-stable:10329:18)
+    at runWithFiberInDEV (https://099ae047-c72a-4d6d-9a4d-323d0833da38-00-jyabmivet2yi.worf.replit.dev/index.bundle?platform=web&dev=true&hot=false&lazy=true&transform.engine=hermes&transform.routerRoot=app&transform.reactCompiler=true&unstable_transformProfile=hermes-stable:5822:70)

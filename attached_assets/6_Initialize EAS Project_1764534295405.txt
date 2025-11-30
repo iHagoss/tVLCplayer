@@ -1,0 +1,14 @@
+﻿2025-11-30T20:21:44.2011473Z ##[group]Run eas init --non-interactive || true
+2025-11-30T20:21:44.2011853Z [36;1meas init --non-interactive || true[0m
+2025-11-30T20:21:44.2045860Z shell: /usr/bin/bash -e {0}
+2025-11-30T20:21:44.2046213Z env:
+2025-11-30T20:21:44.2046532Z   EXPO_TOKEN: ***
+2025-11-30T20:21:44.2046711Z ##[endgroup]
+2025-11-30T20:21:45.0214663Z Found eas-cli in your project dependencies.
+2025-11-30T20:21:45.0221991Z It's recommended to use the "cli.version" field in eas.json to enforce the eas-cli version for your project.
+2025-11-30T20:21:45.0225045Z Learn more: https://github.com/expo/eas-cli#enforcing-eas-cli-version-for-your-project
+2025-11-30T20:21:45.0226851Z 
+2025-11-30T20:21:45.7608396Z ✔ Project already linked (ID: 12345678-1234-5678-1234-567812345678). To re-configure, remove the "extra.eas.projectId" field from your app config.
+2025-11-30T20:21:46.6877443Z Invalid UUID appId
+2025-11-30T20:21:46.6878110Z Request ID: 789b2d9a-f431-46d6-854f-afddaa4b8a8a
+2025-11-30T20:21:46.6905652Z     Error: GraphQL request failed.

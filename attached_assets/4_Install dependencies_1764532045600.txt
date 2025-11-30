@@ -1,0 +1,232 @@
+﻿2025-11-30T19:44:41.7519379Z ##[group]Run npm install
+2025-11-30T19:44:41.7519829Z [36;1mnpm install[0m
+2025-11-30T19:44:41.7571033Z shell: /usr/bin/bash -e {0}
+2025-11-30T19:44:41.7571448Z ##[endgroup]
+2025-11-30T19:44:43.3752827Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3762686Z npm warn EBADENGINE   package: 'metro@0.83.2',
+2025-11-30T19:44:43.3763405Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3764155Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3764724Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3791399Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3792467Z npm warn EBADENGINE   package: 'metro-babel-transformer@0.83.2',
+2025-11-30T19:44:43.3793789Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3794688Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3795440Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3796135Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3797011Z npm warn EBADENGINE   package: 'metro-cache@0.83.2',
+2025-11-30T19:44:43.3801840Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3804719Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3805312Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3805778Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3806465Z npm warn EBADENGINE   package: 'metro-cache-key@0.83.2',
+2025-11-30T19:44:43.3807149Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3807868Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3808457Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3808967Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3809582Z npm warn EBADENGINE   package: 'metro-config@0.83.2',
+2025-11-30T19:44:43.3810253Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3811160Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3811729Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3812184Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4021511Z npm warn EBADENGINE   package: 'metro-core@0.83.2',
+2025-11-30T19:44:43.4022281Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4023028Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4023598Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4041362Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4042450Z npm warn EBADENGINE   package: 'metro-file-map@0.83.2',
+2025-11-30T19:44:43.4043398Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4044337Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4045091Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4045752Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4047007Z npm warn EBADENGINE   package: 'metro-minify-terser@0.83.2',
+2025-11-30T19:44:43.4047938Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4048872Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4049678Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4050367Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4051601Z npm warn EBADENGINE   package: 'metro-resolver@0.83.2',
+2025-11-30T19:44:43.4052472Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4053390Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4054172Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4054797Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4055573Z npm warn EBADENGINE   package: 'metro-runtime@0.83.2',
+2025-11-30T19:44:43.4056398Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4057315Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4058109Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4058761Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4059927Z npm warn EBADENGINE   package: 'metro-source-map@0.83.2',
+2025-11-30T19:44:43.4061105Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4062024Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4062734Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4063352Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4064175Z npm warn EBADENGINE   package: 'metro-symbolicate@0.83.2',
+2025-11-30T19:44:43.4065016Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4065885Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4066603Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4067215Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4068097Z npm warn EBADENGINE   package: 'metro-transform-plugins@0.83.2',
+2025-11-30T19:44:43.4068987Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4082217Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4083559Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4084289Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4085250Z npm warn EBADENGINE   package: 'metro-transform-worker@0.83.2',
+2025-11-30T19:44:43.4086150Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4087055Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4087892Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4088653Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4089280Z npm warn EBADENGINE   package: 'ob1@0.83.2',
+2025-11-30T19:44:43.4089927Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4090931Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4091533Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4092080Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4092821Z npm warn EBADENGINE   package: '@react-native/assets-registry@0.81.5',
+2025-11-30T19:44:43.4093588Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4094319Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4094863Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4095338Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4096094Z npm warn EBADENGINE   package: '@react-native/babel-plugin-codegen@0.81.5',
+2025-11-30T19:44:43.4096863Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4097577Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4098125Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4111214Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4112005Z npm warn EBADENGINE   package: '@react-native/babel-preset@0.81.5',
+2025-11-30T19:44:43.4112790Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4113830Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4114446Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4114976Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4115712Z npm warn EBADENGINE   package: '@react-native/codegen@0.81.5',
+2025-11-30T19:44:43.4116457Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4117225Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4117811Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4118298Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4119102Z npm warn EBADENGINE   package: '@react-native/community-cli-plugin@0.81.5',
+2025-11-30T19:44:43.4119919Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4120898Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4121544Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4122049Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4122846Z npm warn EBADENGINE   package: '@react-native/debugger-frontend@0.81.5',
+2025-11-30T19:44:43.4123645Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4124677Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4125257Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4125741Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4126496Z npm warn EBADENGINE   package: '@react-native/dev-middleware@0.81.5',
+2025-11-30T19:44:43.4127265Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4127987Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4128569Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4129057Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4129806Z npm warn EBADENGINE   package: '@react-native/gradle-plugin@0.81.5',
+2025-11-30T19:44:43.4130768Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4131578Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4132165Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4132650Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4133418Z npm warn EBADENGINE   package: '@react-native/js-polyfills@0.81.5',
+2025-11-30T19:44:43.4134198Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4134948Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4135539Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4136033Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4136664Z npm warn EBADENGINE   package: 'expo-server@1.0.4',
+2025-11-30T19:44:43.4137350Z npm warn EBADENGINE   required: { node: '>=20.16.0' },
+2025-11-30T19:44:43.4138118Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4138693Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4139188Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4139805Z npm warn EBADENGINE   package: 'metro@0.83.3',
+2025-11-30T19:44:43.4140651Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4141411Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4142062Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4142606Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4143412Z npm warn EBADENGINE   package: 'metro-babel-transformer@0.83.3',
+2025-11-30T19:44:43.4144285Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4145139Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4145815Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4146377Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4147094Z npm warn EBADENGINE   package: 'metro-cache@0.83.3',
+2025-11-30T19:44:43.4147857Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4148705Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4149378Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4150263Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4151239Z npm warn EBADENGINE   package: 'metro-cache-key@0.83.3',
+2025-11-30T19:44:43.4152012Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4152828Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4153475Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4154025Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4154750Z npm warn EBADENGINE   package: 'metro-config@0.83.3',
+2025-11-30T19:44:43.4155528Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4156381Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4157009Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4199854Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4200769Z npm warn EBADENGINE   package: 'metro-core@0.83.3',
+2025-11-30T19:44:43.4201492Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4202295Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4202872Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4203612Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4204294Z npm warn EBADENGINE   package: 'metro-file-map@0.83.3',
+2025-11-30T19:44:43.4204978Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4205757Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4206353Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4206837Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4207542Z npm warn EBADENGINE   package: 'metro-minify-terser@0.83.3',
+2025-11-30T19:44:43.4208270Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4209033Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4209622Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4210098Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4210931Z npm warn EBADENGINE   package: 'metro-resolver@0.83.3',
+2025-11-30T19:44:43.4211650Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4212420Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4213006Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4213495Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4214130Z npm warn EBADENGINE   package: 'metro-runtime@0.83.3',
+2025-11-30T19:44:43.4214812Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4215567Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4216162Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4216670Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4217377Z npm warn EBADENGINE   package: 'metro-source-map@0.83.3',
+2025-11-30T19:44:43.4218101Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4218866Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4219464Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4219947Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4220795Z npm warn EBADENGINE   package: 'metro-symbolicate@0.83.3',
+2025-11-30T19:44:43.4221544Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4222330Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4222966Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4223493Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4224256Z npm warn EBADENGINE   package: 'metro-transform-plugins@0.83.3',
+2025-11-30T19:44:43.4225071Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4225885Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4226529Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4227047Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4227811Z npm warn EBADENGINE   package: 'metro-transform-worker@0.83.3',
+2025-11-30T19:44:43.4228597Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4229719Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4230376Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4231107Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4231753Z npm warn EBADENGINE   package: 'ob1@0.83.3',
+2025-11-30T19:44:43.4232398Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4233129Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4233676Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4234179Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4234837Z npm warn EBADENGINE   package: 'react-native@0.81.5',
+2025-11-30T19:44:43.4235591Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4236420Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4237055Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4237548Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4238353Z npm warn EBADENGINE   package: '@react-native/virtualized-lists@0.81.5',
+2025-11-30T19:44:43.4239175Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4240212Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4241021Z npm warn EBADENGINE }
+2025-11-30T19:44:48.1256564Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2025-11-30T19:44:49.4365350Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-11-30T19:44:52.3970719Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T19:44:52.4497500Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T19:44:52.4504314Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T19:44:53.1943852Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T19:45:03.6725064Z 
+2025-11-30T19:45:03.6727295Z added 1004 packages, and audited 1005 packages in 22s
+2025-11-30T19:45:03.6728818Z 
+2025-11-30T19:45:03.6730166Z 181 packages are looking for funding
+2025-11-30T19:45:03.6732033Z   run `npm fund` for details
+2025-11-30T19:45:03.6932807Z 
+2025-11-30T19:45:03.6933710Z 3 vulnerabilities (1 moderate, 2 high)
+2025-11-30T19:45:03.6934196Z 
+2025-11-30T19:45:03.6934499Z To address all issues, run:
+2025-11-30T19:45:03.6935026Z   npm audit fix
+2025-11-30T19:45:03.6935352Z 
+2025-11-30T19:45:03.6935644Z Run `npm audit` for details.

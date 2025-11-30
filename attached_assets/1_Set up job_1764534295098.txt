@@ -1,0 +1,44 @@
+﻿2025-11-30T20:20:52.3047713Z Current runner version: '2.329.0'
+2025-11-30T20:20:52.3085432Z ##[group]Runner Image Provisioner
+2025-11-30T20:20:52.3118694Z Hosted Compute Agent
+2025-11-30T20:20:52.3119664Z Version: 20251016.436
+2025-11-30T20:20:52.3120756Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+2025-11-30T20:20:52.3121996Z Build Date: 2025-10-15T20:44:12Z
+2025-11-30T20:20:52.3123024Z ##[endgroup]
+2025-11-30T20:20:52.3124035Z ##[group]Operating System
+2025-11-30T20:20:52.3125082Z Ubuntu
+2025-11-30T20:20:52.3125833Z 24.04.3
+2025-11-30T20:20:52.3127036Z LTS
+2025-11-30T20:20:52.3127869Z ##[endgroup]
+2025-11-30T20:20:52.3128655Z ##[group]Runner Image
+2025-11-30T20:20:52.3129707Z Image: ubuntu-24.04
+2025-11-30T20:20:52.3130558Z Version: 20251112.124.1
+2025-11-30T20:20:52.3132271Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251112.124/images/ubuntu/Ubuntu2404-Readme.md
+2025-11-30T20:20:52.3134717Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251112.124
+2025-11-30T20:20:52.3157083Z ##[endgroup]
+2025-11-30T20:20:52.3161676Z ##[group]GITHUB_TOKEN Permissions
+2025-11-30T20:20:52.3165170Z Actions: write
+2025-11-30T20:20:52.3166523Z ArtifactMetadata: write
+2025-11-30T20:20:52.3167505Z Attestations: write
+2025-11-30T20:20:52.3168431Z Checks: write
+2025-11-30T20:20:52.3169462Z Contents: write
+2025-11-30T20:20:52.3170307Z Deployments: write
+2025-11-30T20:20:52.3171208Z Discussions: write
+2025-11-30T20:20:52.3172202Z Issues: write
+2025-11-30T20:20:52.3172961Z Metadata: read
+2025-11-30T20:20:52.3173721Z Models: read
+2025-11-30T20:20:52.3174608Z Packages: write
+2025-11-30T20:20:52.3175437Z Pages: write
+2025-11-30T20:20:52.3196714Z PullRequests: write
+2025-11-30T20:20:52.3197878Z RepositoryProjects: write
+2025-11-30T20:20:52.3199115Z SecurityEvents: write
+2025-11-30T20:20:52.3200083Z Statuses: write
+2025-11-30T20:20:52.3201075Z ##[endgroup]
+2025-11-30T20:20:52.3204276Z Secret source: Actions
+2025-11-30T20:20:52.3205413Z Prepare workflow directory
+2025-11-30T20:20:52.3834328Z Prepare all required actions
+2025-11-30T20:20:52.3916495Z Getting action download info
+2025-11-30T20:20:52.8230919Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2025-11-30T20:20:53.9445022Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-11-30T20:20:54.0858400Z Download action repository 'expo/expo-github-action@v8' (SHA:c7b66a9c327a43a8fa7c0158e7f30d6040d2481e)
+2025-11-30T20:20:55.3114562Z Complete job name: build

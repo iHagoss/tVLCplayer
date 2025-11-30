@@ -1,0 +1,10 @@
+﻿2025-11-30T19:45:26.5363058Z ##[group]Run eas build --platform android --profile preview --non-interactive
+2025-11-30T19:45:26.5363615Z [36;1meas build --platform android --profile preview --non-interactive[0m
+2025-11-30T19:45:26.5399275Z shell: /usr/bin/bash -e {0}
+2025-11-30T19:45:26.5399509Z env:
+2025-11-30T19:45:26.5399992Z   EXPO_TOKEN: ***
+2025-11-30T19:45:26.5400208Z ##[endgroup]
+2025-11-30T19:45:28.9236461Z EAS project not configured.
+2025-11-30T19:45:28.9239062Z Must configure EAS project by running 'eas init' before this command can be run in non-interactive mode.
+2025-11-30T19:45:28.9300740Z     Error: build command failed.
+2025-11-30T19:45:28.9885701Z ##[error]Process completed with exit code 1.

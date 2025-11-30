@@ -1,0 +1,71 @@
+﻿2025-11-30T20:20:55.3759928Z ##[group]Run actions/checkout@v4
+2025-11-30T20:20:55.3760582Z with:
+2025-11-30T20:20:55.3760846Z   repository: iHagoss/tVLCplayer
+2025-11-30T20:20:55.3761344Z   token: ***
+2025-11-30T20:20:55.3761625Z   ssh-strict: true
+2025-11-30T20:20:55.3761862Z   ssh-user: git
+2025-11-30T20:20:55.3762100Z   persist-credentials: true
+2025-11-30T20:20:55.3762366Z   clean: true
+2025-11-30T20:20:55.3762620Z   sparse-checkout-cone-mode: true
+2025-11-30T20:20:55.3762906Z   fetch-depth: 1
+2025-11-30T20:20:55.3763161Z   fetch-tags: false
+2025-11-30T20:20:55.3763405Z   show-progress: true
+2025-11-30T20:20:55.3763659Z   lfs: false
+2025-11-30T20:20:55.3763879Z   submodules: false
+2025-11-30T20:20:55.3764117Z   set-safe-directory: true
+2025-11-30T20:20:55.3764592Z ##[endgroup]
+2025-11-30T20:20:55.4927849Z Syncing repository: iHagoss/tVLCplayer
+2025-11-30T20:20:55.4929876Z ##[group]Getting Git version info
+2025-11-30T20:20:55.4930589Z Working directory is '/home/runner/work/tVLCplayer/tVLCplayer'
+2025-11-30T20:20:55.4931629Z [command]/usr/bin/git version
+2025-11-30T20:20:55.5774899Z git version 2.51.2
+2025-11-30T20:20:55.5807257Z ##[endgroup]
+2025-11-30T20:20:55.5823071Z Temporarily overriding HOME='/home/runner/work/_temp/644a52cf-14bc-402f-8ad0-d7738729c6ed' before making global git config changes
+2025-11-30T20:20:55.5827021Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-30T20:20:55.5831215Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tVLCplayer/tVLCplayer
+2025-11-30T20:20:55.5905049Z Deleting the contents of '/home/runner/work/tVLCplayer/tVLCplayer'
+2025-11-30T20:20:55.5909770Z ##[group]Initializing the repository
+2025-11-30T20:20:55.5914943Z [command]/usr/bin/git init /home/runner/work/tVLCplayer/tVLCplayer
+2025-11-30T20:20:55.6422069Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-11-30T20:20:55.6423380Z hint: is subject to change. To configure the initial branch name to use in all
+2025-11-30T20:20:55.6424306Z hint: of your new repositories, which will suppress this warning, call:
+2025-11-30T20:20:55.6425063Z hint:
+2025-11-30T20:20:55.6425660Z hint: 	git config --global init.defaultBranch <name>
+2025-11-30T20:20:55.6426568Z hint:
+2025-11-30T20:20:55.6427181Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-11-30T20:20:55.6428161Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-11-30T20:20:55.6428863Z hint:
+2025-11-30T20:20:55.6429322Z hint: 	git branch -m <name>
+2025-11-30T20:20:55.6429762Z hint:
+2025-11-30T20:20:55.6430344Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-11-30T20:20:55.6454476Z Initialized empty Git repository in /home/runner/work/tVLCplayer/tVLCplayer/.git/
+2025-11-30T20:20:55.6468917Z [command]/usr/bin/git remote add origin https://github.com/iHagoss/tVLCplayer
+2025-11-30T20:20:55.6549340Z ##[endgroup]
+2025-11-30T20:20:55.6551039Z ##[group]Disabling automatic garbage collection
+2025-11-30T20:20:55.6555181Z [command]/usr/bin/git config --local gc.auto 0
+2025-11-30T20:20:55.6587031Z ##[endgroup]
+2025-11-30T20:20:55.6588285Z ##[group]Setting up auth
+2025-11-30T20:20:55.6595383Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-30T20:20:55.6628563Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-30T20:20:55.8227505Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-30T20:20:55.8289731Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-30T20:20:55.8651832Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-30T20:20:55.8710337Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-11-30T20:20:55.9060151Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-11-30T20:20:55.9139752Z ##[endgroup]
+2025-11-30T20:20:55.9148141Z ##[group]Fetching the repository
+2025-11-30T20:20:55.9161836Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f2f941f5923a3bb2f5e0b491b2d0c222309fe7eb:refs/remotes/origin/main
+2025-11-30T20:20:56.7010397Z From https://github.com/iHagoss/tVLCplayer
+2025-11-30T20:20:56.7011142Z  * [new ref]         f2f941f5923a3bb2f5e0b491b2d0c222309fe7eb -> origin/main
+2025-11-30T20:20:56.7084778Z ##[endgroup]
+2025-11-30T20:20:56.7087141Z ##[group]Determining the checkout info
+2025-11-30T20:20:56.7087799Z ##[endgroup]
+2025-11-30T20:20:56.7090830Z [command]/usr/bin/git sparse-checkout disable
+2025-11-30T20:20:56.7169348Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-11-30T20:20:56.7198887Z ##[group]Checking out the ref
+2025-11-30T20:20:56.7202649Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-11-30T20:20:56.7400128Z Switched to a new branch 'main'
+2025-11-30T20:20:56.7402742Z branch 'main' set up to track 'origin/main'.
+2025-11-30T20:20:56.7410173Z ##[endgroup]
+2025-11-30T20:20:56.7450180Z [command]/usr/bin/git log -1 --format=%H
+2025-11-30T20:20:56.7474025Z f2f941f5923a3bb2f5e0b491b2d0c222309fe7eb

@@ -1,0 +1,732 @@
+﻿2025-11-30T19:44:34.3845899Z Current runner version: '2.329.0'
+2025-11-30T19:44:34.3879530Z ##[group]Runner Image Provisioner
+2025-11-30T19:44:34.3881083Z Hosted Compute Agent
+2025-11-30T19:44:34.3881985Z Version: 20251016.436
+2025-11-30T19:44:34.3882913Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+2025-11-30T19:44:34.3884147Z Build Date: 2025-10-15T20:44:12Z
+2025-11-30T19:44:34.3885070Z ##[endgroup]
+2025-11-30T19:44:34.3885885Z ##[group]Operating System
+2025-11-30T19:44:34.3886897Z Ubuntu
+2025-11-30T19:44:34.3887604Z 24.04.3
+2025-11-30T19:44:34.3888292Z LTS
+2025-11-30T19:44:34.3889043Z ##[endgroup]
+2025-11-30T19:44:34.3889963Z ##[group]Runner Image
+2025-11-30T19:44:34.3891203Z Image: ubuntu-24.04
+2025-11-30T19:44:34.3892075Z Version: 20251112.124.1
+2025-11-30T19:44:34.3893833Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20251112.124/images/ubuntu/Ubuntu2404-Readme.md
+2025-11-30T19:44:34.3896513Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20251112.124
+2025-11-30T19:44:34.3898204Z ##[endgroup]
+2025-11-30T19:44:34.3902899Z ##[group]GITHUB_TOKEN Permissions
+2025-11-30T19:44:34.3905545Z Actions: write
+2025-11-30T19:44:34.3906321Z ArtifactMetadata: write
+2025-11-30T19:44:34.3907360Z Attestations: write
+2025-11-30T19:44:34.3908176Z Checks: write
+2025-11-30T19:44:34.3908928Z Contents: write
+2025-11-30T19:44:34.3909939Z Deployments: write
+2025-11-30T19:44:34.3911010Z Discussions: write
+2025-11-30T19:44:34.3911848Z Issues: write
+2025-11-30T19:44:34.3912710Z Metadata: read
+2025-11-30T19:44:34.3913543Z Models: read
+2025-11-30T19:44:34.3914459Z Packages: write
+2025-11-30T19:44:34.3915250Z Pages: write
+2025-11-30T19:44:34.3916014Z PullRequests: write
+2025-11-30T19:44:34.3916788Z RepositoryProjects: write
+2025-11-30T19:44:34.3918059Z SecurityEvents: write
+2025-11-30T19:44:34.3918955Z Statuses: write
+2025-11-30T19:44:34.3919649Z ##[endgroup]
+2025-11-30T19:44:34.3922859Z Secret source: Actions
+2025-11-30T19:44:34.3924031Z Prepare workflow directory
+2025-11-30T19:44:34.4806313Z Prepare all required actions
+2025-11-30T19:44:34.4877646Z Getting action download info
+2025-11-30T19:44:34.7801773Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2025-11-30T19:44:35.4633810Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-11-30T19:44:35.5628488Z Download action repository 'expo/expo-github-action@v8' (SHA:c7b66a9c327a43a8fa7c0158e7f30d6040d2481e)
+2025-11-30T19:44:36.0634157Z Complete job name: build
+2025-11-30T19:44:36.1401272Z ##[group]Run actions/checkout@v4
+2025-11-30T19:44:36.1402595Z with:
+2025-11-30T19:44:36.1403374Z   repository: iHagoss/tVLCplayer
+2025-11-30T19:44:36.1404591Z   token: ***
+2025-11-30T19:44:36.1405346Z   ssh-strict: true
+2025-11-30T19:44:36.1406147Z   ssh-user: git
+2025-11-30T19:44:36.1406950Z   persist-credentials: true
+2025-11-30T19:44:36.1407856Z   clean: true
+2025-11-30T19:44:36.1408678Z   sparse-checkout-cone-mode: true
+2025-11-30T19:44:36.1409652Z   fetch-depth: 1
+2025-11-30T19:44:36.1410618Z   fetch-tags: false
+2025-11-30T19:44:36.1411446Z   show-progress: true
+2025-11-30T19:44:36.1412276Z   lfs: false
+2025-11-30T19:44:36.1413016Z   submodules: false
+2025-11-30T19:44:36.1413836Z   set-safe-directory: true
+2025-11-30T19:44:36.1414971Z ##[endgroup]
+2025-11-30T19:44:36.2573242Z Syncing repository: iHagoss/tVLCplayer
+2025-11-30T19:44:36.2577228Z ##[group]Getting Git version info
+2025-11-30T19:44:36.2579441Z Working directory is '/home/runner/work/tVLCplayer/tVLCplayer'
+2025-11-30T19:44:36.2582844Z [command]/usr/bin/git version
+2025-11-30T19:44:36.2704237Z git version 2.51.2
+2025-11-30T19:44:36.2734904Z ##[endgroup]
+2025-11-30T19:44:36.2749978Z Temporarily overriding HOME='/home/runner/work/_temp/30976665-638f-4d63-9694-cf31be6f8d4c' before making global git config changes
+2025-11-30T19:44:36.2755626Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-30T19:44:36.2771056Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tVLCplayer/tVLCplayer
+2025-11-30T19:44:36.2812467Z Deleting the contents of '/home/runner/work/tVLCplayer/tVLCplayer'
+2025-11-30T19:44:36.2817607Z ##[group]Initializing the repository
+2025-11-30T19:44:36.2822230Z [command]/usr/bin/git init /home/runner/work/tVLCplayer/tVLCplayer
+2025-11-30T19:44:36.2967940Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-11-30T19:44:36.2971684Z hint: is subject to change. To configure the initial branch name to use in all
+2025-11-30T19:44:36.2976765Z hint: of your new repositories, which will suppress this warning, call:
+2025-11-30T19:44:36.2979217Z hint:
+2025-11-30T19:44:36.2981310Z hint: 	git config --global init.defaultBranch <name>
+2025-11-30T19:44:36.2983346Z hint:
+2025-11-30T19:44:36.2985253Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-11-30T19:44:36.2988541Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-11-30T19:44:36.2991267Z hint:
+2025-11-30T19:44:36.2992527Z hint: 	git branch -m <name>
+2025-11-30T19:44:36.2993972Z hint:
+2025-11-30T19:44:36.2995944Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-11-30T19:44:36.2999326Z Initialized empty Git repository in /home/runner/work/tVLCplayer/tVLCplayer/.git/
+2025-11-30T19:44:36.3006189Z [command]/usr/bin/git remote add origin https://github.com/iHagoss/tVLCplayer
+2025-11-30T19:44:36.3037737Z ##[endgroup]
+2025-11-30T19:44:36.3041265Z ##[group]Disabling automatic garbage collection
+2025-11-30T19:44:36.3044224Z [command]/usr/bin/git config --local gc.auto 0
+2025-11-30T19:44:36.3074111Z ##[endgroup]
+2025-11-30T19:44:36.3076344Z ##[group]Setting up auth
+2025-11-30T19:44:36.3080251Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-30T19:44:36.3116617Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-30T19:44:36.3656934Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-30T19:44:36.3665603Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-30T19:44:36.4658288Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-30T19:44:36.4665135Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-11-30T19:44:36.4671904Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-11-30T19:44:36.4677413Z ##[endgroup]
+2025-11-30T19:44:36.4679589Z ##[group]Fetching the repository
+2025-11-30T19:44:36.4684272Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2f38c841b49019a5fca65489462aa6b77e5f4c4e:refs/remotes/origin/main
+2025-11-30T19:44:36.6898332Z From https://github.com/iHagoss/tVLCplayer
+2025-11-30T19:44:36.6900991Z  * [new ref]         2f38c841b49019a5fca65489462aa6b77e5f4c4e -> origin/main
+2025-11-30T19:44:36.6956128Z ##[endgroup]
+2025-11-30T19:44:36.6958282Z ##[group]Determining the checkout info
+2025-11-30T19:44:36.6961068Z ##[endgroup]
+2025-11-30T19:44:36.6962661Z [command]/usr/bin/git sparse-checkout disable
+2025-11-30T19:44:36.6994230Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-11-30T19:44:36.7036632Z ##[group]Checking out the ref
+2025-11-30T19:44:36.7039386Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-11-30T19:44:36.7216234Z Switched to a new branch 'main'
+2025-11-30T19:44:36.7221681Z branch 'main' set up to track 'origin/main'.
+2025-11-30T19:44:36.7235546Z ##[endgroup]
+2025-11-30T19:44:36.7268827Z [command]/usr/bin/git log -1 --format=%H
+2025-11-30T19:44:36.7293759Z 2f38c841b49019a5fca65489462aa6b77e5f4c4e
+2025-11-30T19:44:36.7643411Z ##[group]Run actions/setup-node@v4
+2025-11-30T19:44:36.7644377Z with:
+2025-11-30T19:44:36.7645064Z   node-version: 18
+2025-11-30T19:44:36.7645830Z   always-auth: false
+2025-11-30T19:44:36.7646616Z   check-latest: false
+2025-11-30T19:44:36.7647633Z   token: ***
+2025-11-30T19:44:36.7648345Z ##[endgroup]
+2025-11-30T19:44:36.9475079Z Attempting to download 18...
+2025-11-30T19:44:37.3234519Z Acquiring 18.20.8 - x64 from https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-linux-x64.tar.gz
+2025-11-30T19:44:37.9090032Z Extracting ...
+2025-11-30T19:44:37.9187094Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/34c44592-daf2-4d46-afb0-4ae123dede2d -f /home/runner/work/_temp/a224d3aa-9d8b-4b4f-837b-ca0518c33b4c
+2025-11-30T19:44:39.1118396Z Adding to the cache ...
+2025-11-30T19:44:41.3457386Z ##[group]Environment details
+2025-11-30T19:44:41.7305023Z node: v18.20.8
+2025-11-30T19:44:41.7305550Z npm: 10.8.2
+2025-11-30T19:44:41.7305826Z yarn: 1.22.22
+2025-11-30T19:44:41.7306584Z ##[endgroup]
+2025-11-30T19:44:41.7519399Z ##[group]Run npm install
+2025-11-30T19:44:41.7519835Z [36;1mnpm install[0m
+2025-11-30T19:44:41.7571053Z shell: /usr/bin/bash -e {0}
+2025-11-30T19:44:41.7571455Z ##[endgroup]
+2025-11-30T19:44:43.3752887Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3762700Z npm warn EBADENGINE   package: 'metro@0.83.2',
+2025-11-30T19:44:43.3763411Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3764161Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3764740Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3791418Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3792475Z npm warn EBADENGINE   package: 'metro-babel-transformer@0.83.2',
+2025-11-30T19:44:43.3793796Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3794695Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3795447Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3796213Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3797021Z npm warn EBADENGINE   package: 'metro-cache@0.83.2',
+2025-11-30T19:44:43.3801857Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3804729Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3805318Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3805783Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3806470Z npm warn EBADENGINE   package: 'metro-cache-key@0.83.2',
+2025-11-30T19:44:43.3807153Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3807882Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3808462Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3808972Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.3809587Z npm warn EBADENGINE   package: 'metro-config@0.83.2',
+2025-11-30T19:44:43.3810259Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.3811176Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.3811734Z npm warn EBADENGINE }
+2025-11-30T19:44:43.3812188Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4021548Z npm warn EBADENGINE   package: 'metro-core@0.83.2',
+2025-11-30T19:44:43.4022287Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4023034Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4023603Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4041379Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4042458Z npm warn EBADENGINE   package: 'metro-file-map@0.83.2',
+2025-11-30T19:44:43.4043403Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4044342Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4045096Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4045758Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4047023Z npm warn EBADENGINE   package: 'metro-minify-terser@0.83.2',
+2025-11-30T19:44:43.4047950Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4048878Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4049683Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4050372Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4051610Z npm warn EBADENGINE   package: 'metro-resolver@0.83.2',
+2025-11-30T19:44:43.4052477Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4053395Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4054177Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4054803Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4055578Z npm warn EBADENGINE   package: 'metro-runtime@0.83.2',
+2025-11-30T19:44:43.4056403Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4057321Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4058120Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4059045Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4059933Z npm warn EBADENGINE   package: 'metro-source-map@0.83.2',
+2025-11-30T19:44:43.4061113Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4062029Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4062738Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4063357Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4064180Z npm warn EBADENGINE   package: 'metro-symbolicate@0.83.2',
+2025-11-30T19:44:43.4065022Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4065890Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4066608Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4067219Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4068103Z npm warn EBADENGINE   package: 'metro-transform-plugins@0.83.2',
+2025-11-30T19:44:43.4068992Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4082247Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4083567Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4084295Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4085256Z npm warn EBADENGINE   package: 'metro-transform-worker@0.83.2',
+2025-11-30T19:44:43.4086155Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4087060Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4087901Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4088668Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4089290Z npm warn EBADENGINE   package: 'ob1@0.83.2',
+2025-11-30T19:44:43.4089936Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4090944Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4091539Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4092087Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4092833Z npm warn EBADENGINE   package: '@react-native/assets-registry@0.81.5',
+2025-11-30T19:44:43.4093593Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4094324Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4094868Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4095343Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4096100Z npm warn EBADENGINE   package: '@react-native/babel-plugin-codegen@0.81.5',
+2025-11-30T19:44:43.4096868Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4097583Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4098130Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4111234Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4112013Z npm warn EBADENGINE   package: '@react-native/babel-preset@0.81.5',
+2025-11-30T19:44:43.4112798Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4113840Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4114461Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4114985Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4115721Z npm warn EBADENGINE   package: '@react-native/codegen@0.81.5',
+2025-11-30T19:44:43.4116465Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4117232Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4117817Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4118312Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4119109Z npm warn EBADENGINE   package: '@react-native/community-cli-plugin@0.81.5',
+2025-11-30T19:44:43.4119925Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4120906Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4121551Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4122055Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4122852Z npm warn EBADENGINE   package: '@react-native/debugger-frontend@0.81.5',
+2025-11-30T19:44:43.4123869Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4124683Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4125264Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4125747Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4126502Z npm warn EBADENGINE   package: '@react-native/dev-middleware@0.81.5',
+2025-11-30T19:44:43.4127271Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4127993Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4128575Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4129063Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4129813Z npm warn EBADENGINE   package: '@react-native/gradle-plugin@0.81.5',
+2025-11-30T19:44:43.4130778Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4131585Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4132172Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4132664Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4133425Z npm warn EBADENGINE   package: '@react-native/js-polyfills@0.81.5',
+2025-11-30T19:44:43.4134204Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4134955Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4135546Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4136039Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4136670Z npm warn EBADENGINE   package: 'expo-server@1.0.4',
+2025-11-30T19:44:43.4137357Z npm warn EBADENGINE   required: { node: '>=20.16.0' },
+2025-11-30T19:44:43.4138124Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4138709Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4139196Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4139812Z npm warn EBADENGINE   package: 'metro@0.83.3',
+2025-11-30T19:44:43.4140662Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4141427Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4142072Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4142617Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4143428Z npm warn EBADENGINE   package: 'metro-babel-transformer@0.83.3',
+2025-11-30T19:44:43.4144299Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4145154Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4145828Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4146389Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4147106Z npm warn EBADENGINE   package: 'metro-cache@0.83.3',
+2025-11-30T19:44:43.4147871Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4148721Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4149391Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4150278Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4151267Z npm warn EBADENGINE   package: 'metro-cache-key@0.83.3',
+2025-11-30T19:44:43.4152021Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4152843Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4153487Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4154036Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4154763Z npm warn EBADENGINE   package: 'metro-config@0.83.3',
+2025-11-30T19:44:43.4155541Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4156397Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4157018Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4199873Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4200779Z npm warn EBADENGINE   package: 'metro-core@0.83.3',
+2025-11-30T19:44:43.4201498Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4202301Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4203089Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4203618Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4204300Z npm warn EBADENGINE   package: 'metro-file-map@0.83.3',
+2025-11-30T19:44:43.4204984Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4205764Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4206359Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4206844Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4207547Z npm warn EBADENGINE   package: 'metro-minify-terser@0.83.3',
+2025-11-30T19:44:43.4208275Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4209040Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4209628Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4210105Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4210939Z npm warn EBADENGINE   package: 'metro-resolver@0.83.3',
+2025-11-30T19:44:43.4211663Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4212427Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4213012Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4213501Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4214136Z npm warn EBADENGINE   package: 'metro-runtime@0.83.3',
+2025-11-30T19:44:43.4214818Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4215574Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4216170Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4216677Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4217384Z npm warn EBADENGINE   package: 'metro-source-map@0.83.3',
+2025-11-30T19:44:43.4218109Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4218873Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4219470Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4219952Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4220811Z npm warn EBADENGINE   package: 'metro-symbolicate@0.83.3',
+2025-11-30T19:44:43.4221550Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4222340Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4222974Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4223502Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4224264Z npm warn EBADENGINE   package: 'metro-transform-plugins@0.83.3',
+2025-11-30T19:44:43.4225081Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4225893Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4226538Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4227055Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4227822Z npm warn EBADENGINE   package: 'metro-transform-worker@0.83.3',
+2025-11-30T19:44:43.4228605Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4229743Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4230571Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4231117Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4231760Z npm warn EBADENGINE   package: 'ob1@0.83.3',
+2025-11-30T19:44:43.4232407Z npm warn EBADENGINE   required: { node: '>=20.19.4' },
+2025-11-30T19:44:43.4233138Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4233684Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4234189Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4234858Z npm warn EBADENGINE   package: 'react-native@0.81.5',
+2025-11-30T19:44:43.4235602Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4236433Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4237064Z npm warn EBADENGINE }
+2025-11-30T19:44:43.4237555Z npm warn EBADENGINE Unsupported engine {
+2025-11-30T19:44:43.4238365Z npm warn EBADENGINE   package: '@react-native/virtualized-lists@0.81.5',
+2025-11-30T19:44:43.4239399Z npm warn EBADENGINE   required: { node: '>= 20.19.4' },
+2025-11-30T19:44:43.4240218Z npm warn EBADENGINE   current: { node: 'v18.20.8', npm: '10.8.2' }
+2025-11-30T19:44:43.4241030Z npm warn EBADENGINE }
+2025-11-30T19:44:48.1256607Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2025-11-30T19:44:49.4365397Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-11-30T19:44:52.3970766Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T19:44:52.4497552Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T19:44:52.4504330Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T19:44:53.1943919Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2025-11-30T19:45:03.6725118Z 
+2025-11-30T19:45:03.6727309Z added 1004 packages, and audited 1005 packages in 22s
+2025-11-30T19:45:03.6728828Z 
+2025-11-30T19:45:03.6730176Z 181 packages are looking for funding
+2025-11-30T19:45:03.6732044Z   run `npm fund` for details
+2025-11-30T19:45:03.6932837Z 
+2025-11-30T19:45:03.6933720Z 3 vulnerabilities (1 moderate, 2 high)
+2025-11-30T19:45:03.6934203Z 
+2025-11-30T19:45:03.6934505Z To address all issues, run:
+2025-11-30T19:45:03.6935033Z   npm audit fix
+2025-11-30T19:45:03.6935357Z 
+2025-11-30T19:45:03.6935650Z Run `npm audit` for details.
+2025-11-30T19:45:03.8791195Z ##[group]Run expo/expo-github-action@v8
+2025-11-30T19:45:03.8791635Z with:
+2025-11-30T19:45:03.8791905Z   eas-version: latest
+2025-11-30T19:45:03.8792468Z   token: ***
+2025-11-30T19:45:03.8792756Z   expo-cache: true
+2025-11-30T19:45:03.8793100Z   eas-cache: true
+2025-11-30T19:45:03.8793400Z   packager: yarn
+2025-11-30T19:45:03.8793704Z   patch-watchers: true
+2025-11-30T19:45:03.8794012Z ##[endgroup]
+2025-11-30T19:45:04.2378701Z Skipped installing expo-cli: 'expo-version' not provided.
+2025-11-30T19:45:05.0219897Z ##[group]Installing eas-cli (16.28.0) from cache or with yarn
+2025-11-30T19:45:05.2304374Z ##[warning]Failed to restore: Cache service responded with 400
+2025-11-30T19:45:05.2316180Z [command]/usr/local/bin/yarn add eas-cli@16.28.0
+2025-11-30T19:45:05.3735331Z yarn add v1.22.22
+2025-11-30T19:45:05.3884211Z info No lockfile found.
+2025-11-30T19:45:05.4087833Z [1/4] Resolving packages...
+2025-11-30T19:45:06.7050939Z warning eas-cli > @expo/plist > @xmldom/xmldom@0.7.13: this version is no longer supported, please update to at least 0.8.*
+2025-11-30T19:45:06.7052412Z warning eas-cli > @expo/config-plugins > @expo/plist > @xmldom/xmldom@0.7.13: this version is no longer supported, please update to at least 0.8.*
+2025-11-30T19:45:06.8074918Z warning eas-cli > @oclif/core > @oclif/screen@3.0.8: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2025-11-30T19:45:06.9069194Z warning eas-cli > @expo/steps > lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+2025-11-30T19:45:07.1098804Z warning eas-cli > @expo/package-manager > sudo-prompt@9.1.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2025-11-30T19:45:07.3092594Z warning eas-cli > @expo/logger > bunyan > mv > rimraf@2.4.5: Rimraf versions prior to v4 are no longer supported
+2025-11-30T19:45:07.3133091Z warning eas-cli > @expo/logger > bunyan > mv > rimraf > glob@6.0.4: Glob versions prior to v9 are no longer supported
+2025-11-30T19:45:07.7890265Z warning eas-cli > @expo/logger > bunyan > mv > rimraf > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2025-11-30T19:45:08.0884161Z [2/4] Fetching packages...
+2025-11-30T19:45:14.4111390Z [3/4] Linking dependencies...
+2025-11-30T19:45:14.4129845Z warning "eas-cli > @expo/plugin-help > @oclif/core > ts-node@10.9.2" has unmet peer dependency "@types/node@*".
+2025-11-30T19:45:14.4133912Z warning "eas-cli > @expo/plugin-help > @oclif/core > ts-node@10.9.2" has unmet peer dependency "typescript@>=2.7".
+2025-11-30T19:45:17.5529155Z [4/4] Building fresh packages...
+2025-11-30T19:45:19.5323309Z success Saved lockfile.
+2025-11-30T19:45:19.5638985Z success Saved 286 new dependencies.
+2025-11-30T19:45:19.5645605Z info Direct dependencies
+2025-11-30T19:45:19.5646563Z └─ eas-cli@16.28.0
+2025-11-30T19:45:19.5647264Z info All dependencies
+2025-11-30T19:45:19.5666335Z ├─ @0no-co/graphql.web@1.2.0
+2025-11-30T19:45:19.5667317Z ├─ @babel/helper-validator-identifier@7.28.5
+2025-11-30T19:45:19.5668186Z ├─ @babel/highlight@7.25.9
+2025-11-30T19:45:19.5668999Z ├─ @cspotcode/source-map-support@0.8.1
+2025-11-30T19:45:19.5669547Z ├─ @expo/apple-utils@2.1.12
+2025-11-30T19:45:19.5669992Z ├─ @expo/bunyan@4.0.1
+2025-11-30T19:45:19.5670854Z ├─ @expo/code-signing-certificates@0.0.5
+2025-11-30T19:45:19.5671473Z ├─ @expo/config-plugins@9.0.17
+2025-11-30T19:45:19.5671974Z ├─ @expo/config@10.0.6
+2025-11-30T19:45:19.5672486Z ├─ @expo/eas-json@16.25.0
+2025-11-30T19:45:19.5672921Z ├─ @expo/env@1.0.7
+2025-11-30T19:45:19.5673324Z ├─ @expo/image-utils@0.6.5
+2025-11-30T19:45:19.5673852Z ├─ @expo/multipart-body-parser@2.0.0
+2025-11-30T19:45:19.5674445Z ├─ @expo/osascript@2.1.4
+2025-11-30T19:45:19.5674938Z ├─ @expo/package-manager@1.7.0
+2025-11-30T19:45:19.5675395Z ├─ @expo/pkcs12@0.1.3
+2025-11-30T19:45:19.5676267Z ├─ @expo/plist@0.2.2
+2025-11-30T19:45:19.5676728Z ├─ @expo/plugin-help@5.1.23
+2025-11-30T19:45:19.5677318Z ├─ @expo/plugin-warn-if-update-available@2.5.1
+2025-11-30T19:45:19.5677900Z ├─ @expo/prebuild-config@8.0.17
+2025-11-30T19:45:19.5678354Z ├─ @expo/results@1.0.0
+2025-11-30T19:45:19.5678819Z ├─ @expo/rudder-sdk-node@1.1.1
+2025-11-30T19:45:19.5679270Z ├─ @expo/steps@1.0.231
+2025-11-30T19:45:19.5679829Z ├─ @expo/timeago.js@1.0.0
+2025-11-30T19:45:19.5680245Z ├─ @hapi/topo@5.1.0
+2025-11-30T19:45:19.5680811Z ├─ @isaacs/cliui@8.0.2
+2025-11-30T19:45:19.5681309Z ├─ @jridgewell/gen-mapping@0.3.13
+2025-11-30T19:45:19.5681886Z ├─ @jridgewell/resolve-uri@3.1.2
+2025-11-30T19:45:19.5682456Z ├─ @jridgewell/sourcemap-codec@1.5.5
+2025-11-30T19:45:19.5683044Z ├─ @jridgewell/trace-mapping@0.3.9
+2025-11-30T19:45:19.5683588Z ├─ @nodelib/fs.scandir@2.1.5
+2025-11-30T19:45:19.5684100Z ├─ @nodelib/fs.stat@2.0.5
+2025-11-30T19:45:19.5684606Z ├─ @oclif/linewrap@1.0.0
+2025-11-30T19:45:19.5685187Z ├─ @oclif/plugin-autocomplete@2.3.10
+2025-11-30T19:45:19.5685771Z ├─ @oclif/screen@3.0.8
+2025-11-30T19:45:19.5686251Z ├─ @pkgjs/parseargs@0.11.0
+2025-11-30T19:45:19.5686862Z ├─ @react-native/normalize-colors@0.76.2
+2025-11-30T19:45:19.5687509Z ├─ @segment/ajv-human-errors@2.15.0
+2025-11-30T19:45:19.5688135Z ├─ @segment/loosely-validate-event@2.0.0
+2025-11-30T19:45:19.5689047Z ├─ @sideway/address@4.1.5
+2025-11-30T19:45:19.5689508Z ├─ @tsconfig/node10@1.0.12
+2025-11-30T19:45:19.5689959Z ├─ @tsconfig/node12@1.0.11
+2025-11-30T19:45:19.5690599Z ├─ @tsconfig/node14@1.0.3
+2025-11-30T19:45:19.5692367Z ├─ @tsconfig/node16@1.0.4
+2025-11-30T19:45:19.5692846Z ├─ @types/bunyan@1.8.11
+2025-11-30T19:45:19.5693313Z ├─ @types/cli-progress@3.11.6
+2025-11-30T19:45:19.5693761Z ├─ @urql/core@4.0.11
+2025-11-30T19:45:19.5694195Z ├─ @urql/exchange-retry@1.2.0
+2025-11-30T19:45:19.5694652Z ├─ acorn-walk@8.3.4
+2025-11-30T19:45:19.5695032Z ├─ acorn@8.15.0
+2025-11-30T19:45:19.5695417Z ├─ agent-base@6.0.2
+2025-11-30T19:45:19.5695814Z ├─ ajv-formats@2.1.1
+2025-11-30T19:45:19.5696211Z ├─ ajv@8.11.0
+2025-11-30T19:45:19.5696582Z ├─ ansicolors@0.3.2
+2025-11-30T19:45:19.5696950Z ├─ arg@4.1.3
+2025-11-30T19:45:19.5697358Z ├─ argparse@1.0.10
+2025-11-30T19:45:19.5697756Z ├─ array-union@2.1.0
+2025-11-30T19:45:19.5698143Z ├─ asn1@0.2.6
+2025-11-30T19:45:19.5698533Z ├─ astral-regex@2.0.0
+2025-11-30T19:45:19.5698929Z ├─ async@3.2.6
+2025-11-30T19:45:19.5699295Z ├─ asynckit@0.4.0
+2025-11-30T19:45:19.5699698Z ├─ balanced-match@1.0.2
+2025-11-30T19:45:19.5700182Z ├─ bare-events@2.8.2
+2025-11-30T19:45:19.5701286Z ├─ base64-js@1.5.1
+2025-11-30T19:45:19.5706016Z ├─ better-opn@3.0.2
+2025-11-30T19:45:19.5706562Z ├─ bplist-creator@0.1.0
+2025-11-30T19:45:19.5707068Z ├─ bplist-parser@0.3.2
+2025-11-30T19:45:19.5707803Z ├─ braces@3.0.3
+2025-11-30T19:45:19.5708327Z ├─ buffer-equal-constant-time@1.0.1
+2025-11-30T19:45:19.5708825Z ├─ bunyan@1.8.15
+2025-11-30T19:45:19.5709299Z ├─ call-bind-apply-helpers@1.0.2
+2025-11-30T19:45:19.5709758Z ├─ charenc@0.0.2
+2025-11-30T19:45:19.5710124Z ├─ chownr@2.0.0
+2025-11-30T19:45:19.5711229Z ├─ cli-cursor@3.1.0
+2025-11-30T19:45:19.5711734Z ├─ cli-progress@3.12.0
+2025-11-30T19:45:19.5712186Z ├─ cli-spinners@2.9.2
+2025-11-30T19:45:19.5712600Z ├─ clone@1.0.4
+2025-11-30T19:45:19.5713008Z ├─ color-convert@2.0.1
+2025-11-30T19:45:19.5713443Z ├─ color-name@1.1.4
+2025-11-30T19:45:19.5713868Z ├─ combined-stream@1.0.8
+2025-11-30T19:45:19.5714326Z ├─ commander@4.1.1
+2025-11-30T19:45:19.5714758Z ├─ component-type@1.2.2
+2025-11-30T19:45:19.5715203Z ├─ concat-map@0.0.1
+2025-11-30T19:45:19.5715613Z ├─ content-type@1.0.5
+2025-11-30T19:45:19.5716058Z ├─ create-require@1.1.1
+2025-11-30T19:45:19.5716492Z ├─ cross-spawn@7.0.6
+2025-11-30T19:45:19.5716871Z ├─ crypt@0.0.2
+2025-11-30T19:45:19.5717315Z ├─ crypto-random-string@2.0.0
+2025-11-30T19:45:19.5717804Z ├─ dateformat@4.6.3
+2025-11-30T19:45:19.5718180Z ├─ debug@4.4.3
+2025-11-30T19:45:19.5718558Z ├─ defaults@1.0.4
+2025-11-30T19:45:19.5718978Z ├─ define-lazy-prop@2.0.0
+2025-11-30T19:45:19.5719445Z ├─ delayed-stream@1.0.0
+2025-11-30T19:45:19.5719851Z ├─ diff@7.0.0
+2025-11-30T19:45:19.5720719Z ├─ dir-glob@3.0.1
+2025-11-30T19:45:19.5721168Z ├─ domino@2.1.6
+2025-11-30T19:45:19.5721608Z ├─ dotenv-expand@11.0.7
+2025-11-30T19:45:19.5722026Z ├─ dotenv@16.3.1
+2025-11-30T19:45:19.5722423Z ├─ dtrace-provider@0.8.8
+2025-11-30T19:45:19.5722851Z ├─ dunder-proto@1.0.1
+2025-11-30T19:45:19.5723278Z ├─ eas-cli@16.28.0
+2025-11-30T19:45:19.5723662Z ├─ eastasianwidth@0.2.0
+2025-11-30T19:45:19.5724102Z ├─ ecdsa-sig-formatter@1.0.11
+2025-11-30T19:45:19.5724504Z ├─ ejs@3.1.10
+2025-11-30T19:45:19.5724918Z ├─ env-paths@2.2.0
+2025-11-30T19:45:19.5725354Z ├─ env-string@1.0.1
+2025-11-30T19:45:19.5725765Z ├─ envinfo@7.11.0
+2025-11-30T19:45:19.5726135Z ├─ err-code@2.0.3
+2025-11-30T19:45:19.5726508Z ├─ error-ex@1.3.4
+2025-11-30T19:45:19.5726919Z ├─ es-define-property@1.0.1
+2025-11-30T19:45:19.5727374Z ├─ es-object-atoms@1.1.1
+2025-11-30T19:45:19.5727823Z ├─ es-set-tostringtag@2.1.0
+2025-11-30T19:45:19.5728225Z ├─ esprima@4.0.1
+2025-11-30T19:45:19.5728623Z ├─ events-universal@1.0.1
+2025-11-30T19:45:19.5729065Z ├─ exec-async@2.2.0
+2025-11-30T19:45:19.5729467Z ├─ fast-deep-equal@3.1.3
+2025-11-30T19:45:19.5729862Z ├─ fast-fifo@1.3.2
+2025-11-30T19:45:19.5730246Z ├─ fast-glob@3.3.2
+2025-11-30T19:45:19.5734442Z ├─ fast-uri@3.1.0
+2025-11-30T19:45:19.5734881Z ├─ fastq@1.19.1
+2025-11-30T19:45:19.5735282Z ├─ fetch-retry@4.1.1
+2025-11-30T19:45:19.5735927Z ├─ figures@3.2.0
+2025-11-30T19:45:19.5736310Z ├─ filelist@1.0.4
+2025-11-30T19:45:19.5736705Z ├─ fill-range@7.1.1
+2025-11-30T19:45:19.5737075Z ├─ find-up@4.1.0
+2025-11-30T19:45:19.5737472Z ├─ foreground-child@3.3.1
+2025-11-30T19:45:19.5737898Z ├─ form-data@4.0.5
+2025-11-30T19:45:19.5738290Z ├─ fs-minipass@2.1.0
+2025-11-30T19:45:19.5738690Z ├─ get-intrinsic@1.3.0
+2025-11-30T19:45:19.5739099Z ├─ get-proto@1.0.1
+2025-11-30T19:45:19.5739454Z ├─ glob@10.5.0
+2025-11-30T19:45:19.5739826Z ├─ golden-fleece@1.0.9
+2025-11-30T19:45:19.5740235Z ├─ gradle-to-js@2.0.1
+2025-11-30T19:45:19.5740837Z ├─ graphql-tag@2.12.6
+2025-11-30T19:45:19.5741217Z ├─ graphql@16.8.1
+2025-11-30T19:45:19.5741619Z ├─ has-symbols@1.1.0
+2025-11-30T19:45:19.5742030Z ├─ has-tostringtag@1.0.2
+2025-11-30T19:45:19.5742445Z ├─ hosted-git-info@7.0.2
+2025-11-30T19:45:19.5742849Z ├─ http-call@5.3.0
+2025-11-30T19:45:19.5743251Z ├─ https-proxy-agent@5.0.1
+2025-11-30T19:45:19.5743634Z ├─ ignore@5.3.0
+2025-11-30T19:45:19.5744025Z ├─ imurmurhash@0.1.4
+2025-11-30T19:45:19.5744406Z ├─ inflight@1.0.6
+2025-11-30T19:45:19.5744765Z ├─ inherits@2.0.4
+2025-11-30T19:45:19.5745134Z ├─ is-arrayish@0.2.1
+2025-11-30T19:45:19.5745514Z ├─ is-buffer@1.1.6
+2025-11-30T19:45:19.5745888Z ├─ is-docker@2.2.1
+2025-11-30T19:45:19.5746237Z ├─ is-extglob@2.1.1
+2025-11-30T19:45:19.5746590Z ├─ is-glob@4.0.3
+2025-11-30T19:45:19.5746970Z ├─ is-interactive@1.0.0
+2025-11-30T19:45:19.5747374Z ├─ is-number@7.0.0
+2025-11-30T19:45:19.5747778Z ├─ is-retry-allowed@1.2.0
+2025-11-30T19:45:19.5748190Z ├─ is-stream@2.0.1
+2025-11-30T19:45:19.5748617Z ├─ is-unicode-supported@0.1.0
+2025-11-30T19:45:19.5749045Z ├─ isexe@2.0.0
+2025-11-30T19:45:19.5749433Z ├─ jackspeak@3.4.3
+2025-11-30T19:45:19.5749789Z ├─ jake@10.9.4
+2025-11-30T19:45:19.5750172Z ├─ jimp-compact@0.16.1
+2025-11-30T19:45:19.5756507Z ├─ jks-js@1.1.0
+2025-11-30T19:45:19.5762216Z ├─ join-component@1.1.0
+2025-11-30T19:45:19.5762667Z ├─ js-tokens@4.0.0
+2025-11-30T19:45:19.5763047Z ├─ js-yaml@3.14.2
+2025-11-30T19:45:19.5763424Z ├─ jsep@1.4.0
+2025-11-30T19:45:19.5763889Z ├─ json-parse-better-errors@1.0.2
+2025-11-30T19:45:19.5764362Z ├─ jsonwebtoken@9.0.0
+2025-11-30T19:45:19.5764727Z ├─ jwa@1.4.2
+2025-11-30T19:45:19.5765049Z ├─ jws@3.2.2
+2025-11-30T19:45:19.5765392Z ├─ keychain@1.5.0
+2025-11-30T19:45:19.5765740Z ├─ kleur@3.0.3
+2025-11-30T19:45:19.5766137Z ├─ lines-and-columns@1.2.4
+2025-11-30T19:45:19.5766578Z ├─ locate-path@5.0.0
+2025-11-30T19:45:19.5767004Z ├─ lodash.clonedeep@4.5.0
+2025-11-30T19:45:19.5767443Z ├─ lodash.get@4.4.2
+2025-11-30T19:45:19.5767846Z ├─ lodash.merge@4.6.2
+2025-11-30T19:45:19.5768248Z ├─ lodash@4.17.21
+2025-11-30T19:45:19.5768637Z ├─ lru-cache@10.4.3
+2025-11-30T19:45:19.5769251Z ├─ make-error@1.3.6
+2025-11-30T19:45:19.5769688Z ├─ math-intrinsics@1.1.0
+2025-11-30T19:45:19.5770087Z ├─ md5@2.3.0
+2025-11-30T19:45:19.5770629Z ├─ mime-db@1.52.0
+2025-11-30T19:45:19.5771046Z ├─ mime-types@2.1.35
+2025-11-30T19:45:19.5771419Z ├─ mime@3.0.0
+2025-11-30T19:45:19.5771769Z ├─ mimic-fn@2.1.0
+2025-11-30T19:45:19.5772160Z ├─ minimatch@5.1.2
+2025-11-30T19:45:19.5772603Z ├─ minimist@1.2.8
+2025-11-30T19:45:19.5772961Z ├─ minipass@7.1.2
+2025-11-30T19:45:19.5773319Z ├─ minizlib@3.0.1
+2025-11-30T19:45:19.5773658Z ├─ mkdirp@1.0.4
+2025-11-30T19:45:19.5773994Z ├─ moment@2.30.1
+2025-11-30T19:45:19.5774335Z ├─ ms@2.1.3
+2025-11-30T19:45:19.5774697Z ├─ multipasta@0.2.7
+2025-11-30T19:45:19.5775081Z ├─ mute-stream@0.0.8
+2025-11-30T19:45:19.5775433Z ├─ mv@2.1.1
+2025-11-30T19:45:19.5775749Z ├─ mz@2.7.0
+2025-11-30T19:45:19.5776070Z ├─ nan@2.23.1
+2025-11-30T19:45:19.5776407Z ├─ nanoid@3.3.8
+2025-11-30T19:45:19.5776751Z ├─ ncp@2.0.0
+2025-11-30T19:45:19.5777111Z ├─ node-fetch@2.6.7
+2025-11-30T19:45:19.5777505Z ├─ node-int64@0.4.0
+2025-11-30T19:45:19.5777913Z ├─ node-rsa@1.1.1
+2025-11-30T19:45:19.5778318Z ├─ node-stream-zip@1.15.0
+2025-11-30T19:45:19.5778777Z ├─ npm-package-arg@11.0.3
+2025-11-30T19:45:19.5779205Z ├─ nullthrows@1.1.1
+2025-11-30T19:45:19.5779589Z ├─ object-assign@4.1.1
+2025-11-30T19:45:19.5779958Z ├─ onetime@5.1.2
+2025-11-30T19:45:19.5780719Z ├─ open@8.4.2
+2025-11-30T19:45:19.5781056Z ├─ ora@5.1.0
+2025-11-30T19:45:19.5781401Z ├─ p-limit@2.3.0
+2025-11-30T19:45:19.5781780Z ├─ p-locate@4.1.0
+2025-11-30T19:45:19.5782126Z ├─ p-try@2.2.0
+2025-11-30T19:45:19.5782576Z ├─ package-json-from-dist@1.0.1
+2025-11-30T19:45:19.5783030Z ├─ parse-json@4.0.0
+2025-11-30T19:45:19.5783415Z ├─ parse-png@2.1.0
+2025-11-30T19:45:19.5783823Z ├─ path-is-absolute@1.0.1
+2025-11-30T19:45:19.5784230Z ├─ path-key@3.1.1
+2025-11-30T19:45:19.5784610Z ├─ path-scurry@1.11.1
+2025-11-30T19:45:19.5785004Z ├─ path-type@4.0.0
+2025-11-30T19:45:19.5785385Z ├─ picocolors@1.1.1
+2025-11-30T19:45:19.5785751Z ├─ picomatch@2.3.1
+2025-11-30T19:45:19.5786127Z ├─ pirates@4.0.7
+2025-11-30T19:45:19.5786475Z ├─ pkg-dir@4.2.0
+2025-11-30T19:45:19.5786812Z ├─ plist@3.1.0
+2025-11-30T19:45:19.5787158Z ├─ pngjs@7.0.0
+2025-11-30T19:45:19.5787541Z ├─ proc-log@4.2.0
+2025-11-30T19:45:19.5787952Z ├─ promise-limit@2.7.0
+2025-11-30T19:45:19.5788374Z ├─ promise-retry@2.0.1
+2025-11-30T19:45:19.5788779Z ├─ prompts@2.4.2
+2025-11-30T19:45:19.5789155Z ├─ punycode@2.3.1
+2025-11-30T19:45:19.5789566Z ├─ qrcode-terminal@0.12.0
+2025-11-30T19:45:19.5790012Z ├─ queue-microtask@1.2.3
+2025-11-30T19:45:19.5790558Z ├─ redeyed@2.1.1
+2025-11-30T19:45:19.5791034Z ├─ remove-trailing-slash@0.1.1
+2025-11-30T19:45:19.5791500Z ├─ restore-cursor@3.1.0
+2025-11-30T19:45:19.5791872Z ├─ retry@0.12.0
+2025-11-30T19:45:19.5792212Z ├─ reusify@1.1.0
+2025-11-30T19:45:19.5792575Z ├─ rimraf@5.0.10
+2025-11-30T19:45:19.5792965Z ├─ run-parallel@1.2.0
+2025-11-30T19:45:19.5793423Z ├─ safe-json-stringify@1.2.0
+2025-11-30T19:45:19.5793890Z ├─ safer-buffer@2.1.2
+2025-11-30T19:45:19.5794265Z ├─ sax@1.4.3
+2025-11-30T19:45:19.5794638Z ├─ semver@7.7.3
+2025-11-30T19:45:19.5795057Z ├─ set-interval-async@3.0.3
+2025-11-30T19:45:19.5795512Z ├─ shebang-command@2.0.0
+2025-11-30T19:45:19.5795950Z ├─ shebang-regex@3.0.0
+2025-11-30T19:45:19.5796359Z ├─ simple-plist@1.3.1
+2025-11-30T19:45:19.5796755Z ├─ sisteransi@1.0.5
+2025-11-30T19:45:19.5797137Z ├─ slice-ansi@4.0.0
+2025-11-30T19:45:19.5797515Z ├─ split@1.0.1
+2025-11-30T19:45:19.5797881Z ├─ sprintf-js@1.0.3
+2025-11-30T19:45:19.5798291Z ├─ stream-buffers@2.2.0
+2025-11-30T19:45:19.5798698Z ├─ streamx@2.23.0
+2025-11-30T19:45:19.5799094Z ├─ string-width-cjs@4.2.3
+2025-11-30T19:45:19.5799658Z ├─ strip-ansi-cjs@6.0.1
+2025-11-30T19:45:19.5800079Z ├─ sudo-prompt@9.1.1
+2025-11-30T19:45:19.5800663Z ├─ supports-color@7.2.0
+2025-11-30T19:45:19.5801089Z ├─ tar-stream@3.1.7
+2025-11-30T19:45:19.5801444Z ├─ tar@6.2.1
+2025-11-30T19:45:19.5801798Z ├─ temp-dir@2.0.0
+2025-11-30T19:45:19.5802194Z ├─ text-decoder@1.2.3
+2025-11-30T19:45:19.5802605Z ├─ thenify-all@1.6.0
+2025-11-30T19:45:19.5802974Z ├─ thenify@3.3.1
+2025-11-30T19:45:19.5803574Z ├─ this-file@2.0.3
+2025-11-30T19:45:19.5803969Z ├─ through@2.3.8
+2025-11-30T19:45:19.5804370Z ├─ to-regex-range@5.0.1
+2025-11-30T19:45:19.5804752Z ├─ tr46@0.0.3
+2025-11-30T19:45:19.5805137Z ├─ ts-deepmerge@6.2.0
+2025-11-30T19:45:19.5805615Z ├─ ts-interface-checker@0.1.13
+2025-11-30T19:45:19.5806284Z ├─ ts-node@10.9.2
+2025-11-30T19:45:19.5806645Z ├─ tslib@2.8.1
+2025-11-30T19:45:19.5807028Z ├─ tunnel-agent@0.6.0
+2025-11-30T19:45:19.5807428Z ├─ turndown@7.1.2
+2025-11-30T19:45:19.5807818Z ├─ type-fest@0.21.3
+2025-11-30T19:45:19.5808220Z ├─ undici-types@7.16.0
+2025-11-30T19:45:19.5808641Z ├─ unique-string@2.0.0
+2025-11-30T19:45:19.5809043Z ├─ untildify@4.0.0
+2025-11-30T19:45:19.5809395Z ├─ uri-js@4.4.1
+2025-11-30T19:45:19.5809737Z ├─ uuid@8.3.2
+2025-11-30T19:45:19.5810140Z ├─ v8-compile-cache-lib@3.0.1
+2025-11-30T19:45:19.5810853Z ├─ validate-npm-package-name@5.0.1
+2025-11-30T19:45:19.5811362Z ├─ webidl-conversions@3.0.1
+2025-11-30T19:45:19.5811761Z ├─ which@2.0.2
+2025-11-30T19:45:19.5812152Z ├─ wordwrap@1.0.0
+2025-11-30T19:45:19.5812552Z ├─ wrap-ansi-cjs@7.0.0
+2025-11-30T19:45:19.5812929Z ├─ yaml@2.6.0
+2025-11-30T19:45:19.5813253Z ├─ yn@3.1.1
+2025-11-30T19:45:19.5813616Z └─ yocto-queue@0.1.0
+2025-11-30T19:45:19.5813968Z Done in 14.21s.
+2025-11-30T19:45:24.5272510Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/tVLCplayer/tVLCplayer --files-from manifest.txt --use-compress-program zstdmt
+2025-11-30T19:45:25.2318906Z ##[warning]Failed to save: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>01Z4saQAAAAA0L5klU81ATKHhN7d1fR/GUEhMMzBFREdFMDIxNwBFZGdl
+2025-11-30T19:45:25.2348350Z ##[endgroup]
+2025-11-30T19:45:25.2349559Z ##[group]Validating authenticated account
+2025-11-30T19:45:25.2369616Z [command]/opt/hostedtoolcache/eas-cli/16.28.0/x64/node_modules/.bin/eas whoami
+2025-11-30T19:45:26.2243398Z hagoss (authenticated using EXPO_TOKEN)
+2025-11-30T19:45:26.4766496Z ##[endgroup]
+2025-11-30T19:45:26.4769268Z ##[group]Patching system watchers for the 'ENOSPC' error
+2025-11-30T19:45:26.4783894Z [command]/usr/bin/sudo sysctl fs.inotify.max_user_instances=524288
+2025-11-30T19:45:26.4871166Z fs.inotify.max_user_instances = 524288
+2025-11-30T19:45:26.4897610Z [command]/usr/bin/sudo sysctl fs.inotify.max_user_watches=524288
+2025-11-30T19:45:26.4975202Z fs.inotify.max_user_watches = 524288
+2025-11-30T19:45:26.5003086Z [command]/usr/bin/sudo sysctl fs.inotify.max_queued_events=524288
+2025-11-30T19:45:26.5078998Z fs.inotify.max_queued_events = 524288
+2025-11-30T19:45:26.5106824Z [command]/usr/bin/sudo sysctl -p
+2025-11-30T19:45:26.5183860Z vm.max_map_count = 262144
+2025-11-30T19:45:26.5188181Z fs.inotify.max_user_watches = 655360
+2025-11-30T19:45:26.5189586Z fs.inotify.max_user_instances = 1280
+2025-11-30T19:45:26.5190052Z vm.mmap_rnd_bits = 28
+2025-11-30T19:45:26.5197130Z Patched system watchers for the `ENOSPC` error.
+2025-11-30T19:45:26.5199113Z ##[endgroup]
+2025-11-30T19:45:26.5363071Z ##[group]Run eas build --platform android --profile preview --non-interactive
+2025-11-30T19:45:26.5363625Z [36;1meas build --platform android --profile preview --non-interactive[0m
+2025-11-30T19:45:26.5399282Z shell: /usr/bin/bash -e {0}
+2025-11-30T19:45:26.5399511Z env:
+2025-11-30T19:45:26.5399995Z   EXPO_TOKEN: ***
+2025-11-30T19:45:26.5400211Z ##[endgroup]
+2025-11-30T19:45:28.9236507Z EAS project not configured.
+2025-11-30T19:45:28.9239076Z Must configure EAS project by running 'eas init' before this command can be run in non-interactive mode.
+2025-11-30T19:45:28.9300755Z     Error: build command failed.
+2025-11-30T19:45:28.9885727Z ##[error]Process completed with exit code 1.
+2025-11-30T19:45:28.9993337Z Post job cleanup.
+2025-11-30T19:45:29.1521765Z [command]/usr/bin/git version
+2025-11-30T19:45:29.1565561Z git version 2.51.2
+2025-11-30T19:45:29.1620864Z Temporarily overriding HOME='/home/runner/work/_temp/c134efe1-49e2-412a-927b-561ab7de7b3a' before making global git config changes
+2025-11-30T19:45:29.1622434Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-30T19:45:29.1625917Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tVLCplayer/tVLCplayer
+2025-11-30T19:45:29.1702509Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-30T19:45:29.1757540Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-30T19:45:29.2006178Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-30T19:45:29.2029236Z http.https://github.com/.extraheader
+2025-11-30T19:45:29.2045433Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-11-30T19:45:29.2083114Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-30T19:45:29.2314448Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-30T19:45:29.2348083Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-11-30T19:45:29.2682937Z Cleaning up orphan processes
+2025-11-30T19:45:29.2936026Z Terminate orphan process: pid (2141) (node)
