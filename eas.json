@@ -8,7 +8,7 @@
       "distribution": "internal",
       "android": {
         "buildType": "apk",
-        "gradleCommand": ":app:assembleDebug"
+        "credentialsSource": "local"
       }
     },
     "development": {
@@ -16,7 +16,7 @@
       "distribution": "internal",
       "android": {
         "buildType": "apk",
-        "gradleCommand": ":app:assembleDebug"
+        "credentialsSource": "local"
       }
     }
   }
