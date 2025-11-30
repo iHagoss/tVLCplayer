@@ -1,7 +1,9 @@
 {
   "cli": {
-    "version": ">= 16.0.0"
+    "version": ">= 16.0.0",
+    "appVersionSource": "local"
   },
+  "projectId": "12345678-1234-5678-1234-567812345678",
   "build": {
     "preview": {
       "android": {
