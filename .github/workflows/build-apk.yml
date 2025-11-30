@@ -45,9 +45,37 @@ jobs:
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Build Debug APK (Local)
+      - name: Generate Debug Keystore
         run: |
-          eas build --platform android --profile preview --local --non-interactive --output ./StreamPlayer.apk
+          mkdir -p android/keystores
+          keytool -genkey -v \
+            -storetype JKS \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storepass android \
+            -keypass android \
+            -alias androiddebugkey \
+            -keystore android/keystores/debug.keystore \
+            -dname "CN=Android Debug,O=Android,C=US"
+
+      - name: Create credentials.json
+        run: |
+          cat > credentials.json << 'EOF'
+          {
+            "android": {
+              "keystore": {
+                "keystorePath": "./android/keystores/debug.keystore",
+                "keystorePassword": "android",
+                "keyAlias": "androiddebugkey",
+                "keyPassword": "android"
+              }
+            }
+          }
+          EOF
+
+      - name: Build Debug APK (Local)
+        run: eas build --platform android --profile preview --local --non-interactive --output ./StreamPlayer.apk
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
