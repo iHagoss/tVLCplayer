@@ -1,3 +1,22 @@
+{
+  "expo": {
+    "name": "StreamPlayer",
+    "slug": "stream-player",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "icon": "./assets/images/icon.png",
+    "scheme": "streamplayer",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.streamplayer.app"
+    },
+    "android": {
+      "package": "com.streamplayer.app",
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ],
       "intentFilters": [
         {
           "action": "android.intent.action.VIEW",
@@ -11,16 +30,6 @@
               "scheme": "https",
               "host": "*",
               "pathPattern": ".*\\.mp4"
-            },
-            {
-              "scheme": "http",
-              "host": "*",
-              "pathPattern": ".*\\.mkv"
-            },
-            {
-              "scheme": "https",
-              "host": "*",
-              "pathPattern": ".*\\.mkv"
             }
           ],
           "category": [
@@ -29,3 +38,9 @@
           ]
         }
       ]
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    }
+  }
+}
