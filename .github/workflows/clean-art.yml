@@ -1,0 +1,115 @@
+name: Actions Cleanup (no PAT)
+
+on:
+  workflow_dispatch:
+    inputs:
+      delete_runs:
+        description: "Delete workflow runs"
+        required: true
+        type: boolean
+        default: true
+      delete_artifacts:
+        description: "Delete artifacts"
+        required: true
+        type: boolean
+        default: true
+      keep_latest_runs:
+        description: "Keep newest N workflow runs (0 = delete all)"
+        required: true
+        default: "0"
+        type: string
+      keep_latest_artifacts:
+        description: "Keep newest N artifacts (0 = delete all)"
+        required: true
+        default: "0"
+        type: string
+      confirm:
+        description: "Type DELETE to confirm"
+        required: true
+        type: string
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - name: Cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Repo: $GITHUB_REPOSITORY"
+          echo "delete_runs=${{ inputs.delete_runs }}"
+          echo "delete_artifacts=${{ inputs.delete_artifacts }}"
+          echo "keep_latest_runs=${{ inputs.keep_latest_runs }}"
+          echo "keep_latest_artifacts=${{ inputs.keep_latest_artifacts }}"
+          echo "confirm=${{ inputs.confirm }}"
+
+          if [ "${{ inputs.confirm }}" != "DELETE" ]; then
+            echo "Refusing to run: confirm must be DELETE"
+            exit 1
+          fi
+
+          if ! [[ "${{ inputs.keep_latest_runs }}" =~ ^[0-9]+$ ]]; then
+            echo "keep_latest_runs must be an integer"
+            exit 1
+          fi
+          if ! [[ "${{ inputs.keep_latest_artifacts }}" =~ ^[0-9]+$ ]]; then
+            echo "keep_latest_artifacts must be an integer"
+            exit 1
+          fi
+
+          KEEP_RUNS="${{ inputs.keep_latest_runs }}"
+          KEEP_ART="${{ inputs.keep_latest_artifacts }}"
+
+          echo "gh auth status:"
+          gh auth status || true
+
+          if [ "${{ inputs.delete_artifacts }}" = "true" ]; then
+            echo "Deleting artifacts (keeping newest $KEEP_ART)..."
+
+            gh api --paginate "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" \
+              --jq '.artifacts
+                    | sort_by(.created_at)
+                    | reverse
+                    | .['"$KEEP_ART"':]
+                    | .[].id' > /tmp/artifacts.txt
+
+            echo "Artifact IDs to delete: $(wc -l < /tmp/artifacts.txt | tr -d ' ')"
+
+            while read -r ID; do
+              [ -z "$ID" ] && continue
+              echo "DELETE artifact $ID"
+              gh api -X DELETE "repos/$GITHUB_REPOSITORY/actions/artifacts/$ID"
+            done < /tmp/artifacts.txt
+          else
+            echo "Artifact deletion disabled by input."
+          fi
+
+          if [ "${{ inputs.delete_runs }}" = "true" ]; then
+            echo "Deleting workflow runs (keeping newest $KEEP_RUNS)..."
+
+            gh api --paginate "repos/$GITHUB_REPOSITORY/actions/runs?per_page=100" \
+              --jq '.workflow_runs
+                    | map(select(.status=="completed"))
+                    | sort_by(.created_at)
+                    | reverse
+                    | .['"$KEEP_RUNS"':]
+                    | .[].id' > /tmp/runs.txt
+
+            echo "Run IDs to delete: $(wc -l < /tmp/runs.txt | tr -d ' ')"
+
+            while read -r ID; do
+              [ -z "$ID" ] && continue
+              echo "DELETE run $ID"
+              gh api -X DELETE "repos/$GITHUB_REPOSITORY/actions/runs/$ID"
+            done < /tmp/runs.txt
+          else
+            echo "Run deletion disabled by input."
+          fi
